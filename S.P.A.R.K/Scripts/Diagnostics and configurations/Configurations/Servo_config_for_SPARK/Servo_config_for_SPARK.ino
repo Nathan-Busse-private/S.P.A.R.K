@@ -10,6 +10,12 @@
   Made by Nathan-Busse.
 */
 
+/*
+
+Leg position identification
+
+*/
+
 // The code
 
 // Calling Libraries
@@ -25,46 +31,52 @@
 //pwm (Board 1)
 /*
   -------
-  Leg A
+  femur A
   -------
 */
-#define Hip_A 0
-#define Leg_A 1
-#define Foot_A 2
+#define coxae_A 0
+#define femur_A 1
+#define tibia_A 2
 
 /*
   -------
-  Leg B
+  femur B
   -------
 */
-#define Hip_B 4
-#define Leg_B 5
-#define Foot_B 6
+#define coxae_B 4
+#define femur_B 5
+#define tibia_B 6
 
 /*
   -------
-  Leg C
+  femur C
   -------
 */
-#define Hip_C 8
-#define Leg_C 9
-#define Foot_C 10
+#define coxae_C 8
+#define femur_C 9
+#define tibia_C 10
 
 /*
   -------
-  Leg D
+  femur D
   -------
 */
 
-#define Hip_D 12
-#define Leg_D 13
-#define Foot_D 14
+#define coxae_D 12
+#define femur_D 13
+#define tibia_D 14
 
-// servo
+// Degres left femur
+#define coxae_l 90
+#define femur_l 180
+#define tibia_l 0
 
-#define hip_l 90
-#define leg_l 180
-#define foot_l 0
+// Degrees right femur
+#define coxae_r 90
+#define femur_r 0
+#define tibia_r 0
+
+
 
 //Min and Max pulse values
 
@@ -93,28 +105,28 @@ void setup() {
 
 void loop() {
   //--------------------------------------------------------------------
-  //  servos to 90 degrees for each leg.
+  //  Set servos to resting state before assembly.
   //--------------------------------------------------------------------
 
-  pwm.setPWM(Hip_A, 0, pulseWidth(hip_l));  // A
-  pwm.setPWM(Leg_A, 0, pulseWidth(leg_l));  // A
-  pwm.setPWM(Foot_A, 0, pulseWidth(foot_l));  // A
+  // Left leg
+  pwm.setPWM(coxae_A, 0, pulseWidth(coxae_l));  // A
+  pwm.setPWM(femur_A, 0, pulseWidth(femur_l));  // A
+  pwm.setPWM(tibia_A, 0, pulseWidth(tibia_l));  // A
+
+  pwm.setPWM(coxae_B, 0, pulseWidth(coxae_l));   // B
+  pwm.setPWM(femur_B, 0, pulseWidth(femur_l));  // B
+  pwm.setPWM(tibia_B, 0, pulseWidth(tibia_l));  // B
+
+  // Right leg
+  pwm.setPWM(coxae_C, 0, pulseWidth(coxae_r));   // C
+  pwm.setPWM(tibia_C, 0, pulseWidth(femur_r));  // C
+  pwm.setPWM(femur_C, 0, pulseWidth(tibia_r));  // C
+
+  pwm.setPWM(coxae_D, 0, pulseWidth(coxae_r));   // D
+  pwm.setPWM(femur_D, 0, pulseWidth(femur_r));  // D
+  pwm.setPWM(tibia_D, 0, pulseWidth(tibia_r));  // D
   delay(hold);
-
-  /*
-  pwm.setPWM(Hip_B, 0, pulseWidth());   // B
-  pwm.setPWM(Leg_B, 0, pulseWidth());  // B
-  pwm.setPWM(Foot_B, 0, pulseWidth());  // B
-
-  pwm.setPWM(Hip_C, 0, pulseWidth());   // C
-  pwm.setPWM(Foot_C, 0, pulseWidth());  // C
-  pwm.setPWM(Leg_C, 0, pulseWidth());  // C
-
-  pwm.setPWM(Hip_D, 0, pulseWidth());   // D
-  pwm.setPWM(Leg_D, 0, pulseWidth());  // D
-  pwm.setPWM(Foot_D, 0, pulseWidth());  // D
-  delay(hold);
-  */
+  
 }
 
 //--------------------------------------------------------------------
