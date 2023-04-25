@@ -98,6 +98,7 @@ void loop() {
   pwm.setPWM(Tibia_B, 0, pulseWidth(T_stand));
   pwm.setPWM(Tibia_C, 0, pulseWidth(T_stand));
   pwm.setPWM(Tibia_D, 0, pulseWidth(T_stand));
+  delay(hold);
 }
 
 // Pulsewidth declaration
