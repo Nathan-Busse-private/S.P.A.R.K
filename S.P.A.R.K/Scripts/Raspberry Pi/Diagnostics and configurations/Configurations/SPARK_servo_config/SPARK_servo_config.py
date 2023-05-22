@@ -45,54 +45,52 @@ tibia = 0
 # Sleep variables
 idle = 1 # The number of seconds the servos will pause for incoming signals.
 
-
 #Servo positions
-# Leg A
+# Coxae
 for Coxae_A in range(len(kit.servo)):
     kit.servo[Coxae_A].angle = coxae
 time.sleep(idle)
 
-for Femur_A in range(len(kit.servo)):
-    kit.servo[Femur_A].angle = femur_L
-time.sleep(idle)
-
-for Tibia_A in range(len(kit.servo)):
-    kit.servo[Tibia_A].angle = tibia
-time.sleep(idle)
-
-# Leg B
 for Coxae_B in range(len(kit.servo)):
     kit.servo[Coxae_B].angle = coxae
+time.sleep(idle)
+
+for Coxae_C in range(len(kit.servo)):
+    kit.servo[Coxae_C].angle = coxae
+time.sleep(idle)
+
+for Coxae_D in range(len(kit.servo)):
+    kit.servo[Coxae_D].angle = coxae
+time.sleep(idle)
+
+# Femur
+for Femur_A in range(len(kit.servo)):
+    kit.servo[Femur_A].angle = femur_L
 time.sleep(idle)
 
 for Femur_B in range(len(kit.servo)):
     kit.servo[Femur_B].angle = femur_L
 time.sleep(idle)
 
-for Tibia_B in range(len(kit.servo)):
-    kit.servo[Tibia_B].angle = tibia
-time.sleep(idle)
-
-# Leg C
-for Coxae_C in range(len(kit.servo)):
-    kit.servo[Coxae_C].angle = coxae
-time.sleep(idle)
-
 for Femur_C in range(len(kit.servo)):
     kit.servo[Femur_C].angle = femur_R
 time.sleep(idle)
 
-for Tibia_C in range(len(kit.servo)):
-    kit.servo[Tibia_C].angle = tibia
-time.sleep(idle)
-
-# Leg D
-for Coxae_D in range(len(kit.servo)):
-    kit.servo[Coxae_D].angle = coxae
-time.sleep(idle)
-
 for Femur_D in range(len(kit.servo)):
     kit.servo[Femur_D].angle = femur_R
+time.sleep(idle)
+
+# Tibia
+for Tibia_A in range(len(kit.servo)):
+    kit.servo[Tibia_A].angle = tibia
+time.sleep(idle)
+
+for Tibia_B in range(len(kit.servo)):
+    kit.servo[Tibia_B].angle = tibia
+time.sleep(idle)
+
+for Tibia_C in range(len(kit.servo)):
+    kit.servo[Tibia_C].angle = tibia
 time.sleep(idle)
 
 for Tibia_D in range(len(kit.servo)):
