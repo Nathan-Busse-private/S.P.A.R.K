@@ -1,7 +1,7 @@
 """
 Project: S.P.A.R.K
 Start date: 16 April 2023
-Last edited: 3 May 2023
+Last edited: 27 May 2023
 Info:
 
 Callibrating all servos before assembly.
