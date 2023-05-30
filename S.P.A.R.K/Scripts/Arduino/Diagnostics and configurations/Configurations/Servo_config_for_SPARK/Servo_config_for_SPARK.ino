@@ -2,7 +2,7 @@
 /* Servo_config_for_SPARK
   Project: S.P.A.R.K
   Start date: 10 April 2023
-  Last edited: 16 April 2023
+  Last edited: 30 May 2023
   Info:
 
   Callibrating all servos before assembly.
@@ -69,12 +69,12 @@ Leg position identification
 // Degres left femur
 #define coxae_l 90
 #define femur_l 180
-#define tibia_l 0
+#define tibia_l 1
 
 // Degrees right femur
 #define coxae_r 90
 #define femur_r 0
-#define tibia_r 0
+#define tibia_r 1
 
 
 

@@ -36,8 +36,8 @@ Made by Nathan-Busse
 // Resting position
 #define C_idle 90     // Coxae idle
 #define F_rest_L 180  // Femur left at rest
-#define F_rest_R 0    // Femur right at rest
-#define T_rest 0      // Tibia rest
+#define F_rest_R 1    // Femur right at rest
+#define T_rest 1      // Tibia rest
 
 // Standing position
 #define C_idle 90      // Coxae idle
