@@ -3,7 +3,7 @@ Stand_up test
 
 Project: S.P.A.R.K
 Start date: 10 April 2023
-Last edited: 20 April 2023
+Last edited: 30 May 2023
 Info:
 
 S.P.A.R.K will perform a series of transitoms from its standing position and returning back to its resting position.
@@ -11,7 +11,6 @@ The perpose of this test is to see if the MG996R servos can support the weight o
 
 Made by Nathan-Busse
 */
-
 
 // Libraries
 #include <Adafruit_PWMServoDriver.h>
@@ -35,19 +34,20 @@ Made by Nathan-Busse
 
 // Degree declarations
 // Resting position
-#define C_idle 90
-#define F_rest_L 180
-#define F_rest_R 0
-#define T_rest 0
+#define C_idle 90     // Coxae idle
+#define F_rest_L 180  // Femur left at rest
+#define F_rest_R 0    // Femur right at rest
+#define T_rest 0      // Tibia rest
 
 // Standing position
-#define C_idle 90
-#define F_stand_L 135
-#define F_stand_R 45
-#define T_stand 45
+#define C_idle 90      // Coxae idle
+#define F_stand_L 135  // Femur left at rest
+#define F_stand_R 45   // Femur right at rest
+#define T_stand 45     // Tibia stand
 
 // Define time delay
-#define hold 100
+#define wait 100   // Period of time to pause the servos before transitioning to the standing position.
+#define hold 2000  // Period of time to remain standing.
 
 // PWM setup
 #define MIN_PulseLength 500
@@ -80,8 +80,7 @@ void loop() {
   pwm.setPWM(Tibia_B, 0, pulseWidth(T_rest));
   pwm.setPWM(Tibia_C, 0, pulseWidth(T_rest));
   pwm.setPWM(Tibia_D, 0, pulseWidth(T_rest));
-
-  delay(hold);
+  delay(wait);
 
   // Stand position
   pwm.setPWM(Coxae_A, 0, pulseWidth(C_idle));
