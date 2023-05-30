@@ -34,16 +34,17 @@ Made by Nathan-Busse
 
 // Degree declarations
 // Resting position
-#define C_idle 90     // Coxae idle
-#define F_rest_L 180  // Femur left at rest
-#define F_rest_R 1    // Femur right at rest
-#define T_rest 1      // Tibia rest
 
 // Standing position
 #define C_idle 90      // Coxae idle
-#define F_stand_L 135  // Femur left at rest
-#define F_stand_R 45   // Femur right at rest
-#define T_stand 45     // Tibia stand
+#define FF_stand_L 135  // Femur left while standing
+#define FF_stand_R 45   // Femur right while standing
+
+#define BF_stand_L 135  // Femur left while standing
+#define BF_stand_R 45   // Femur right while standing
+
+#define FT_stand 50     // Tibia stand
+#define BT_stand 60
 
 // Define time delay
 //#define wait 10000   // Period of time to pause the servos before transitioning to the standing position.
@@ -65,40 +66,22 @@ void setup() {
 }
 
 void loop() {
-  /*
-  // Rest postion
-  pwm.setPWM(Coxae_A, 0, pulseWidth(C_idle));
-  pwm.setPWM(Coxae_B, 0, pulseWidth(C_idle));
-  pwm.setPWM(Coxae_C, 0, pulseWidth(C_idle));
-  pwm.setPWM(Coxae_D, 0, pulseWidth(C_idle));
-
-  pwm.setPWM(Femur_A, 0, pulseWidth(F_rest_L));
-  pwm.setPWM(Femur_B, 0, pulseWidth(F_rest_L));
-  pwm.setPWM(Femur_C, 0, pulseWidth(F_rest_R));
-  pwm.setPWM(Femur_D, 0, pulseWidth(F_rest_R));
-
-  pwm.setPWM(Tibia_A, 0, pulseWidth(T_rest));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(T_rest));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(T_rest));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(T_rest));
-  delay(wait);
-  */
-
+  
   // Stand position
   pwm.setPWM(Coxae_A, 0, pulseWidth(C_idle));
   pwm.setPWM(Coxae_B, 0, pulseWidth(C_idle));
   pwm.setPWM(Coxae_C, 0, pulseWidth(C_idle));
   pwm.setPWM(Coxae_D, 0, pulseWidth(C_idle));
 
-  pwm.setPWM(Femur_A, 0, pulseWidth(F_stand_L));
-  pwm.setPWM(Femur_B, 0, pulseWidth(F_stand_L));
-  pwm.setPWM(Femur_C, 0, pulseWidth(F_stand_R));
-  pwm.setPWM(Femur_D, 0, pulseWidth(F_stand_R));
+  pwm.setPWM(Femur_A, 0, pulseWidth(FF_stand_L));
+  pwm.setPWM(Femur_B, 0, pulseWidth(BF_stand_L));
+  pwm.setPWM(Femur_C, 0, pulseWidth(BF_stand_R));
+  pwm.setPWM(Femur_D, 0, pulseWidth(FF_stand_R));
 
-  pwm.setPWM(Tibia_A, 0, pulseWidth(T_stand));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(T_stand));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(T_stand));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(T_stand));
+  pwm.setPWM(Tibia_A, 0, pulseWidth(FT_stand));
+  pwm.setPWM(Tibia_B, 0, pulseWidth(BT_stand));
+  pwm.setPWM(Tibia_C, 0, pulseWidth(BT_stand));
+  pwm.setPWM(Tibia_D, 0, pulseWidth(FT_stand));
   delay(hold);
 }
 
