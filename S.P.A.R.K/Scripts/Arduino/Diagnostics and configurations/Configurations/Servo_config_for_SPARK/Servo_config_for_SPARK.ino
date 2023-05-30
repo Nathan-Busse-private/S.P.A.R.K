@@ -68,12 +68,12 @@ Leg position identification
 
 // Degres left femur
 #define coxae_l 90
-#define femur_l 180
+#define femur_l 179
 #define tibia_l 1
 
 // Degrees right femur
 #define coxae_r 90
-#define femur_r 0
+#define femur_r 1
 #define tibia_r 1
 
 

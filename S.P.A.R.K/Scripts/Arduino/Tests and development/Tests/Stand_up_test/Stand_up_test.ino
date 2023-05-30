@@ -46,8 +46,8 @@ Made by Nathan-Busse
 #define T_stand 45     // Tibia stand
 
 // Define time delay
-#define wait 100   // Period of time to pause the servos before transitioning to the standing position.
-#define hold 2000  // Period of time to remain standing.
+//#define wait 10000   // Period of time to pause the servos before transitioning to the standing position.
+#define hold 100  // Period of time to remain standing.
 
 // PWM setup
 #define MIN_PulseLength 500
@@ -65,6 +65,7 @@ void setup() {
 }
 
 void loop() {
+  /*
   // Rest postion
   pwm.setPWM(Coxae_A, 0, pulseWidth(C_idle));
   pwm.setPWM(Coxae_B, 0, pulseWidth(C_idle));
@@ -81,6 +82,7 @@ void loop() {
   pwm.setPWM(Tibia_C, 0, pulseWidth(T_rest));
   pwm.setPWM(Tibia_D, 0, pulseWidth(T_rest));
   delay(wait);
+  */
 
   // Stand position
   pwm.setPWM(Coxae_A, 0, pulseWidth(C_idle));
