@@ -80,9 +80,9 @@ Leg position identification
 
 //Min and Max pulse values
 
-#define MIN_PULSE_WIDTH 600
-#define MAX_PULSE_WIDTH 2400
-#define DEFAULT_PULSE_WIDTH 2400
+#define MIN_PULSE_WIDTH 500
+#define MAX_PULSE_WIDTH 2500
+#define DEFAULT_PULSE_WIDTH 2500
 #define FREQUENCY 50
 
 int degrees;
