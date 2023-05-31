@@ -2,7 +2,7 @@
 /* Servo_config_for_SPARK
   Project: S.P.A.R.K
   Start date: 10 April 2023
-  Last edited: 30 May 2023
+  Last edited: 31 May 2023
   Info:
 
   Callibrating all servos before assembly.
@@ -80,9 +80,9 @@ Leg position identification
 
 //Min and Max pulse values
 
-#define MIN_PULSE_WIDTH 500
-#define MAX_PULSE_WIDTH 2500
-#define DEFAULT_PULSE_WIDTH 2500
+#define MIN_PULSE_WIDTH 600
+#define MAX_PULSE_WIDTH 2400
+#define DEFAULT_PULSE_WIDTH 2400
 #define FREQUENCY 50
 
 int degrees;

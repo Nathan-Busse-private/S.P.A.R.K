@@ -3,7 +3,7 @@ Stand_up test
 
 Project: S.P.A.R.K
 Start date: 10 April 2023
-Last edited: 30 May 2023
+Last edited: 31 May 2023
 Info:
 
 S.P.A.R.K will perform a series of transitoms from its standing position and returning back to its resting position.
@@ -44,7 +44,7 @@ Made by Nathan-Busse
 #define BF_stand_R 45   // Femur right while standing
 
 #define FT_stand 50     // Tibia stand
-#define BT_stand 60
+#define BT_stand 65
 
 // Define time delay
 //#define wait 10000   // Period of time to pause the servos before transitioning to the standing position.
