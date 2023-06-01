@@ -48,7 +48,7 @@ Made by Nathan-Busse
 
 // Define time delay
 //#define wait 10000   // Period of time to pause the servos before transitioning to the standing position.
-#define hold 100  // Period of time to remain standing.
+#define hold 200  // Period of time to remain standing.
 
 // PWM setup
 #define MIN_PulseLength 500

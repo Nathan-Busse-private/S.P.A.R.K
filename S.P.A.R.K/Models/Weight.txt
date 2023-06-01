@@ -1,0 +1,14 @@
+Total weight 886 grams excluding top plate and psu and battery holder.
+
+Total weight of servos = 660 grams
+
+886 + 660 = 1546 grams
+
+Weight of electronics with Arduino = 32.6 grams
+
+Weight of electronics with Raspberry Pi 4B = 53.6 grams
+
+Current weeith of robot with Arduino = 1578.6 grams = 1.5786 = 1.58 kilograms
+
+Current weight of robot with Raspberry Pi 4B = 1599.6 grams = 1.5996 = 1.60 kilograms
+
