@@ -1,5 +1,13 @@
+/* S.P.A.R.K_Bluetooth
+   Project: S.P.A.R.K
+   Start date: 5 June 2023
+   Last edited: 5 June 2023
+   Info:
 
+   Experimenting how to make S.P.A.R.K walk by manual control.
 
+   Made by Nathan-Busse
+   */
 
 #include <SoftwareSerial.h>  // TX RX software library for bluetooth
 #include <Adafruit_PWMServoDriver.h>
@@ -37,15 +45,15 @@
 #define coxae_r 90
 #define femur_r 1
 #define tibia_r 1
-// Standing position 
+// Standing position
 #define C_idle 90       // Coxae idle
-#define FF_stand_L 135  // Femur left while standing
-#define FF_stand_R 45   // Femur right while standing
+#define FF_stand_L 134  // Femur left while standing
+#define FF_stand_R 46   // Femur right while standing
 
-#define BF_stand_L 135  // Femur left while standing
-#define BF_stand_R 45   // Femur right while standing
+#define BF_stand_L 134  // Femur left while standing
+#define BF_stand_R 46   // Femur right while standing
 
-#define FT_stand 50  // Tibia stand
+#define FT_stand 70  // Tibia stand
 #define BT_stand 70
 
 // Define time delay
@@ -54,21 +62,21 @@
 // Walking position
 
 // Tibia
-#define FT_Rise 60
-#define BT_Rise 60
+#define FT_Rise 65
+#define BT_Rise 65
 #define FT_Lower 70
 #define BT_Lower 70
 
 // Femur
-#define FF_Rise_L 125
-#define BF_Rise_L 125
-#define FF_Lower_L 135
-#define BF_Lower_L 135
+#define FF_Rise_L 134
+#define BF_Rise_L 134
+#define FF_Lower_L 129
+#define BF_Lower_L 129
 
-#define FF_Rise_R 35
-#define BF_Rise_R 35
-#define FF_Lower_R 25
-#define BF_Lower_R 25
+#define FF_Rise_R 46
+#define BF_Rise_R 46
+#define FF_Lower_R 51
+#define BF_Lower_R 51
 
 // PWM setup
 #define MIN_PulseLength 500
@@ -85,10 +93,7 @@ int bluetoothTx = 3;  // bluetooth tx to 2 pin
 int bluetoothRx = 4;  // bluetooth rx to 3 pin
 SoftwareSerial bluetooth(bluetoothTx, bluetoothRx);
 
-
-
 char command;      //variable to store the data
-int velocity = 0;  //Variable to control the speed of motor
 
 void setup() {
   //Set the baud rate of serial communication and bluetooth module at same rate.
@@ -99,34 +104,40 @@ void setup() {
 }
 
 void loop() {
-  if (bluetooth.available() < 1) {  // rest
-  pwm.setPWM(Coxae_A, 0, pulseWidth(coxae_l));  // A
-  pwm.setPWM(Femur_A, 0, pulseWidth(femur_l));  // A
-  pwm.setPWM(Tibia_A, 0, pulseWidth(tibia_l));  // A
 
-  pwm.setPWM(Coxae_B, 0, pulseWidth(coxae_l));   // B
-  pwm.setPWM(Femur_B, 0, pulseWidth(femur_l));  // B
-  pwm.setPWM(Tibia_B, 0, pulseWidth(tibia_l));  // B
+  // When their is no Bluetooth connection S.P.A.R.K will enter its rest position
+  if (bluetooth.available() < 1) {
 
-  // Right leg
-  pwm.setPWM(Coxae_C, 0, pulseWidth(coxae_r));   // C
-  pwm.setPWM(Femur_C, 0, pulseWidth(femur_r));  // C
-  pwm.setPWM(Tibia_C, 0, pulseWidth(tibia_r));  // C
+    pwm.setPWM(Coxae_A, 0, pulseWidth(coxae_l));  // A
+    pwm.setPWM(Femur_A, 0, pulseWidth(femur_l));  // A
+    pwm.setPWM(Tibia_A, 0, pulseWidth(tibia_l));  // A
 
-  pwm.setPWM(Coxae_D, 0, pulseWidth(coxae_r));   // D
-  pwm.setPWM(Femur_D, 0, pulseWidth(femur_r));  // D
-  pwm.setPWM(Tibia_D, 0, pulseWidth(tibia_r));  // D
-  delay(hold);
+    pwm.setPWM(Coxae_B, 0, pulseWidth(coxae_l));  // B
+    pwm.setPWM(Femur_B, 0, pulseWidth(femur_l));  // B
+    pwm.setPWM(Tibia_B, 0, pulseWidth(tibia_l));  // B
+
+    pwm.setPWM(Coxae_C, 0, pulseWidth(coxae_r));  // C
+    pwm.setPWM(Femur_C, 0, pulseWidth(femur_r));  // C
+    pwm.setPWM(Tibia_C, 0, pulseWidth(tibia_r));  // C
+
+    pwm.setPWM(Coxae_D, 0, pulseWidth(coxae_r));  // D
+    pwm.setPWM(Femur_D, 0, pulseWidth(femur_r));  // D
+    pwm.setPWM(Tibia_D, 0, pulseWidth(tibia_r));  // D
+    delay(hold);
   }
-    
-  if (bluetooth.available() > 0) {  //Checking if there is some data available or not
-    command = bluetooth.read();     //Storing the data in the 'command' variable
-    Serial.println(command);        //Printing it on the serial monitor
+
+
+  // When their is a Bluetooth connection S.P.A.R.K will enter its stand position.
+  else
+    (bluetooth.available() > 0);
+  {                              //Checking if there is some data available or not
+    command = bluetooth.read();  //Storing the data in the 'command' variable
+    Serial.println(command);     //Printing it on the serial monitor
 
     //Change pin mode only if new command is different from previous.
     switch (command) {
       case 'F':  //Moving the Car Forward
-        
+
         break;
       case 'B':  //Moving the Car Backward
 
@@ -157,7 +168,6 @@ void loop() {
     }
   }
 }
-
 
 // Pulsewidth declaration
 int pulseWidth(int angle) {

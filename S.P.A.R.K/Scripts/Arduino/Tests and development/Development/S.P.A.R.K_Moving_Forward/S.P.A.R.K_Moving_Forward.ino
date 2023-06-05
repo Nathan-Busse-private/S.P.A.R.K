@@ -50,13 +50,13 @@
 
 // Standing position (Currently un-used)
 #define C_idle 90       // Coxae idle
-#define FF_stand_L 135  // Femur left while standing
-#define FF_stand_R 45   // Femur right while standing
+#define FF_stand_L 134  // Femur left while standing
+#define FF_stand_R 46   // Femur right while standing
 
-#define BF_stand_L 135  // Femur left while standing
-#define BF_stand_R 45   // Femur right while standing
+#define BF_stand_L 134  // Femur left while standing
+#define BF_stand_R 46   // Femur right while standing
 
-#define FT_stand 50  // Tibia stand
+#define FT_stand 70  // Tibia stand
 #define BT_stand 70
 
 // Define time delay
@@ -64,21 +64,21 @@
 // Walking position
 
 // Tibia
-#define FT_Rise 60
-#define BT_Rise 60
+#define FT_Rise 65
+#define BT_Rise 65
 #define FT_Lower 70
 #define BT_Lower 70
 
 // Femur
-#define FF_Rise_L 125
-#define BF_Rise_L 125
-#define FF_Lower_L 135
-#define BF_Lower_L 135
+#define FF_Rise_L 134
+#define BF_Rise_L 134
+#define FF_Lower_L 129
+#define BF_Lower_L 129
 
-#define FF_Rise_R 35
-#define BF_Rise_R 35
-#define FF_Lower_R 25
-#define BF_Lower_R 25
+#define FF_Rise_R 46
+#define BF_Rise_R 46
+#define FF_Lower_R 51
+#define BF_Lower_R 51
 
 // PWM setup
 #define MIN_PulseLength 500
