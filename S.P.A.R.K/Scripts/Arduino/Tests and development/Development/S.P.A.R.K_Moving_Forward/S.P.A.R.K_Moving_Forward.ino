@@ -4,7 +4,7 @@
    Last edited: 4 June 2023
    Info:
 
-  My first attempt to make S.P.A.R.K walk forward for the first time.
+  My third attempt to make S.P.A.R.K walk forward for the first time.
 
   My walking theory:
   ------------------
