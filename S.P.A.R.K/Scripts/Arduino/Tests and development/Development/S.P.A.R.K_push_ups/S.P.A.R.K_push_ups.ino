@@ -1,24 +1,11 @@
-/* S.P.A.R.K moving forward
+/* S.P.A.R.K_push_ups
    Project: S.P.A.R.K
-   Start date: 31 May 2023
+   Start date: 5 June 2023
    Last edited: 5 June 2023
    Info:
 
-  My third attempt to make S.P.A.R.K walk forward for the first time.
-
-  My walking theory:
-  ------------------
-  Their will 2 legs touching the ground and 2 in the air fpr each step.
-  The 2 legs will operate in sync with the other leg diagnal from its partner.
-  For example:
-
-  Leg A will partner with Leg C
-  Leg B will partner with Leg D.
-
-  The Tibia of the paired legs will lift first and the Femur will then lift second. 
-  Once the second pair of legs begin to lift, the already raised Femur will then lower
-  first then the Tibia will lower second which follows on indefinitly, thus making the robot walk.
-
+    S.P.A.R.K doing some pushups.
+ 
   Made by Nathan-Busse.
 */
 
@@ -69,26 +56,7 @@
 #define BT_stand 70
 
 // Define time delay
-#define pause 400
-#define hold 4000
-// Walking position
-
-// Tibia
-#define FT_Rise 60
-#define BT_Rise 60
-#define FT_Lower 70
-#define BT_Lower 70
-
-// Femur
-#define FF_Rise_L 115
-#define BF_Rise_L 115
-#define FF_Lower_L 135
-#define BF_Lower_L 135
-
-#define FF_Rise_R 45
-#define BF_Rise_R 45
-#define FF_Lower_R 25
-#define BF_Lower_R 25
+#define hold 600
 
 // PWM setup
 #define MIN_PulseLength 500
@@ -102,6 +70,11 @@ int degrees;
 void setup() {
   pwm.begin();
   pwm.setPWMFreq(Frequency);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
 
   pwm.setPWM(Coxae_A, 0, pulseWidth(C_idle));
   pwm.setPWM(Coxae_B, 0, pulseWidth(C_idle));
@@ -118,40 +91,41 @@ void setup() {
   pwm.setPWM(Tibia_C, 0, pulseWidth(BT_stand));
   pwm.setPWM(Tibia_D, 0, pulseWidth(FT_stand));
   delay(hold);
-}
 
-void loop() {
+  pwm.setPWM(Coxae_A, 0, pulseWidth(coxae_l));  // A
+  pwm.setPWM(Femur_A, 0, pulseWidth(femur_l));  // A
+  pwm.setPWM(Tibia_A, 0, pulseWidth(tibia_l));  // A
 
-  //delay(hold);
-  // Walking position
+  pwm.setPWM(Coxae_B, 0, pulseWidth(coxae_l));  // B
+  pwm.setPWM(Femur_B, 0, pulseWidth(femur_l));  // B
+  pwm.setPWM(Tibia_B, 0, pulseWidth(tibia_l));  // B
+
+  // Right leg
+  pwm.setPWM(Coxae_C, 0, pulseWidth(coxae_r));  // C
+  pwm.setPWM(Femur_C, 0, pulseWidth(femur_r));  // C
+  pwm.setPWM(Tibia_C, 0, pulseWidth(tibia_r));  // C
+
+  pwm.setPWM(Coxae_D, 0, pulseWidth(coxae_r));  // D
+  pwm.setPWM(Femur_D, 0, pulseWidth(femur_r));  // D
+  pwm.setPWM(Tibia_D, 0, pulseWidth(tibia_r));  // D
+  delay(hold);
+
   pwm.setPWM(Coxae_A, 0, pulseWidth(C_idle));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(C_idle));
   pwm.setPWM(Coxae_C, 0, pulseWidth(C_idle));
   pwm.setPWM(Coxae_D, 0, pulseWidth(C_idle));
-  pwm.setPWM(Coxae_B, 0, pulseWidth(C_idle));
 
-  // Rise
-  pwm.setPWM(Tibia_A, 0, pulseWidth(FT_Rise));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(BT_Rise));
-  pwm.setPWM(Femur_A, 0, pulseWidth(FF_Rise_L));
-  pwm.setPWM(Femur_C, 0, pulseWidth(BF_Rise_R));
-  delay(pause);
+  pwm.setPWM(Femur_A, 0, pulseWidth(FF_stand_L));
+  pwm.setPWM(Femur_B, 0, pulseWidth(BF_stand_L));
+  pwm.setPWM(Femur_C, 0, pulseWidth(BF_stand_R));
+  pwm.setPWM(Femur_D, 0, pulseWidth(FF_stand_R));
 
-  pwm.setPWM(Tibia_D, 0, pulseWidth(FT_Rise));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(BT_Rise));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FF_Rise_R));
-  pwm.setPWM(Femur_B, 0, pulseWidth(BF_Rise_L));
+  pwm.setPWM(Tibia_A, 0, pulseWidth(FT_stand));
+  pwm.setPWM(Tibia_B, 0, pulseWidth(BT_stand));
+  pwm.setPWM(Tibia_C, 0, pulseWidth(BT_stand));
+  pwm.setPWM(Tibia_D, 0, pulseWidth(FT_stand));
+  delay(hold);
 
-  // Lower
-  pwm.setPWM(Femur_A, 0, pulseWidth(FF_Lower_L));
-  pwm.setPWM(Femur_C, 0, pulseWidth(BF_Lower_R));
-  pwm.setPWM(Tibia_A, 0, pulseWidth(FT_Lower));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(BT_Lower));
-  delay(pause);
-
-  pwm.setPWM(Femur_D, 0, pulseWidth(FF_Lower_R));
-  pwm.setPWM(Femur_B, 0, pulseWidth(BF_Lower_L));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(FT_Lower));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(BT_Lower));
 }
 
 // Pulsewidth declaration

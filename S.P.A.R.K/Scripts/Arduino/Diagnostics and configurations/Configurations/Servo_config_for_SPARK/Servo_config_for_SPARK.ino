@@ -100,8 +100,8 @@ void loop() {
 
   // Right leg
   pwm.setPWM(coxae_C, 0, pulseWidth(coxae_r));   // C
-  pwm.setPWM(tibia_C, 0, pulseWidth(femur_r));  // C
-  pwm.setPWM(femur_C, 0, pulseWidth(tibia_r));  // C
+  pwm.setPWM(femur_C, 0, pulseWidth(femur_r));  // C
+  pwm.setPWM(tibia_C, 0, pulseWidth(tibia_r));  // C
 
   pwm.setPWM(coxae_D, 0, pulseWidth(coxae_r));   // D
   pwm.setPWM(femur_D, 0, pulseWidth(femur_r));  // D
