@@ -1,7 +1,7 @@
 /* Servo_config_for_SPARK
   Project: S.P.A.R.K
   Start date: 10 April 2023
-  Last edited: 31 May 2023
+  Last edited: 5 May 2023
   Info:
 
   Callibrating all servos before assembly.
