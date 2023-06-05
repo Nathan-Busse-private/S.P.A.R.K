@@ -48,17 +48,10 @@
 
 // Leg position identification
 // Degres left femur
-#define coxae_l 90
-#define femur_l 179
-#define tibia_l 1
 
-// Degrees right femur
-#define coxae_r 90
-#define femur_r 1
-#define tibia_r 1
 
 // Standing position (Currently un-used)
-#define C_idle 90       // Coxae idle
+#define C_idle 91       // Coxae idle
 #define FF_stand_L 134  // Femur left while standing
 #define FF_stand_R 46   // Femur right while standing
 
