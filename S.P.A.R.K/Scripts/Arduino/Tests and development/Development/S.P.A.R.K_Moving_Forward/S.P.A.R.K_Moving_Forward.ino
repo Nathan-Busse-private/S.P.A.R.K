@@ -57,17 +57,17 @@
 #define BF_stand_R 45   // Femur right while standing
 
 #define FT_stand 50  // Tibia stand
-#define BT_stand 65
+#define BT_stand 70
 
 // Define time delay
 #define pause 400
 // Walking position
 
 // Tibia
-#define FT_Rise 40
-#define BT_Rise 40
-#define FT_Lower 50
-#define BT_Lower 50
+#define FT_Rise 60
+#define BT_Rise 60
+#define FT_Lower 70
+#define BT_Lower 70
 
 // Femur
 #define FF_Rise_L 125
