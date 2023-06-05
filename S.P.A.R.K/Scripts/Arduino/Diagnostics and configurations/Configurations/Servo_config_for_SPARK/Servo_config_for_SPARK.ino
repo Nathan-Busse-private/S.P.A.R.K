@@ -9,25 +9,13 @@
   Made by Nathan-Busse.
 */
 
-/*
-
-Leg position identification
-
-*/
-
-// The code
-
 // Calling Libraries
-
 #include <Adafruit_PWMServoDriver.h>
 #include <Wire.h>
 
-// Declaring pins
 
 // Channel definitions
 
-
-//pwm (Board 1)
 /*
   -------
   femur A
@@ -75,15 +63,11 @@ Leg position identification
 #define femur_r 1
 #define tibia_r 1
 
-
-
 //Min and Max pulse values
-
 #define MIN_PULSE_WIDTH 500
 #define MAX_PULSE_WIDTH 2500
 #define DEFAULT_PULSE_WIDTH 2500
 #define FREQUENCY 50
-
 int degrees;
 
 // Millis declarations
@@ -92,8 +76,6 @@ int degrees;
 
 // Address definitions for servo controllers
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x40);
-
-
 
 void setup() {
   // put your setup code here, to run once:
@@ -125,7 +107,6 @@ void loop() {
   pwm.setPWM(femur_D, 0, pulseWidth(femur_r));  // D
   pwm.setPWM(tibia_D, 0, pulseWidth(tibia_r));  // D
   delay(hold);
-  
 }
 
 //--------------------------------------------------------------------
