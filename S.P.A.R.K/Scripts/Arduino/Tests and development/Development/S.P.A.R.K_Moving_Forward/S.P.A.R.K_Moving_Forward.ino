@@ -64,21 +64,21 @@
 // Walking position
 
 // Tibia
-#define FT_Rise 65
-#define BT_Rise 65
+#define FT_Rise 50
+#define BT_Rise 50
 #define FT_Lower 70
 #define BT_Lower 70
 
 // Femur
-#define FF_Rise_L 134
-#define BF_Rise_L 134
-#define FF_Lower_L 129
-#define BF_Lower_L 129
+#define FF_Rise_L 115
+#define BF_Rise_L 115
+#define FF_Lower_L 135
+#define BF_Lower_L 135
 
-#define FF_Rise_R 46
-#define BF_Rise_R 46
-#define FF_Lower_R 51
-#define BF_Lower_R 51
+#define FF_Rise_R 45
+#define BF_Rise_R 45
+#define FF_Lower_R 25
+#define BF_Lower_R 25
 
 // PWM setup
 #define MIN_PulseLength 500
