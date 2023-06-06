@@ -8,7 +8,7 @@
 
   My walking theory:
   ------------------
-  Their will 2 legs touching the ground and 2 in the air fpr each step.
+  Their will be 2 legs touching the ground and 2 in the air for each step.
   The 2 legs will operate in sync with the other leg diagnal from its partner.
   For example:
 
