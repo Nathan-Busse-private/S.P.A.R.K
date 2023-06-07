@@ -1,7 +1,7 @@
 /* S.P.A.R.K_Bluetooth
    Project: S.P.A.R.K
    Start date: 5 June 2023
-   Last edited: 5 June 2023
+   Last edited: 7 June 2023
    Info:
 
    Experimenting how to make S.P.A.R.K walk by manual control.
@@ -46,7 +46,7 @@
 #define femur_r 1
 #define tibia_r 1
 // Standing position
-#define C_idle 90       // Coxae idle
+#define C_idle 91       // Coxae idle
 #define FF_stand_L 134  // Femur left while standing
 #define FF_stand_R 46   // Femur right while standing
 
@@ -58,25 +58,26 @@
 
 // Define time delay
 #define pause 400
-#define hold 100
+#define hold 4000
 // Walking position
 
 // Tibia
-#define FT_Rise 65
-#define BT_Rise 65
+#define FT_Rise 60
+#define BT_Rise 60
 #define FT_Lower 70
 #define BT_Lower 70
 
 // Femur
-#define FF_Rise_L 134
-#define BF_Rise_L 134
-#define FF_Lower_L 129
-#define BF_Lower_L 129
+#define FF_Rise_L 115
+#define BF_Rise_L 115
+#define FF_Lower_L 135
+#define BF_Lower_L 135
 
-#define FF_Rise_R 46
-#define BF_Rise_R 46
-#define FF_Lower_R 51
-#define BF_Lower_R 51
+#define FF_Rise_R 45
+#define BF_Rise_R 45
+#define FF_Lower_R 25
+#define BF_Lower_R 25
+
 
 // PWM setup
 #define MIN_PulseLength 500
@@ -93,7 +94,7 @@ int bluetoothTx = 3;  // bluetooth tx to 2 pin
 int bluetoothRx = 4;  // bluetooth rx to 3 pin
 SoftwareSerial bluetooth(bluetoothTx, bluetoothRx);
 
-char command;      //variable to store the data
+char command;  //variable to store the data
 
 void setup() {
   //Set the baud rate of serial communication and bluetooth module at same rate.
@@ -137,7 +138,34 @@ void loop() {
     //Change pin mode only if new command is different from previous.
     switch (command) {
       case 'F':  //Moving the Car Forward
+        pwm.setPWM(Coxae_A, 0, pulseWidth(C_idle));
+        pwm.setPWM(Coxae_C, 0, pulseWidth(C_idle));
+        pwm.setPWM(Coxae_D, 0, pulseWidth(C_idle));
+        pwm.setPWM(Coxae_B, 0, pulseWidth(C_idle));
 
+        // Rise
+        pwm.setPWM(Tibia_A, 0, pulseWidth(FT_Rise));
+        pwm.setPWM(Tibia_C, 0, pulseWidth(BT_Rise));
+        pwm.setPWM(Femur_A, 0, pulseWidth(FF_Rise_L));
+        pwm.setPWM(Femur_C, 0, pulseWidth(BF_Rise_R));
+        delay(pause);
+
+        pwm.setPWM(Tibia_D, 0, pulseWidth(FT_Rise));
+        pwm.setPWM(Tibia_B, 0, pulseWidth(BT_Rise));
+        pwm.setPWM(Femur_D, 0, pulseWidth(FF_Rise_R));
+        pwm.setPWM(Femur_B, 0, pulseWidth(BF_Rise_L));
+
+        // Lower
+        pwm.setPWM(Femur_A, 0, pulseWidth(FF_Lower_L));
+        pwm.setPWM(Femur_C, 0, pulseWidth(BF_Lower_R));
+        pwm.setPWM(Tibia_A, 0, pulseWidth(FT_Lower));
+        pwm.setPWM(Tibia_C, 0, pulseWidth(BT_Lower));
+        delay(pause);
+
+        pwm.setPWM(Femur_D, 0, pulseWidth(FF_Lower_R));
+        pwm.setPWM(Femur_B, 0, pulseWidth(BF_Lower_L));
+        pwm.setPWM(Tibia_D, 0, pulseWidth(FT_Lower));
+        pwm.setPWM(Tibia_B, 0, pulseWidth(BT_Lower));
         break;
       case 'B':  //Moving the Car Backward
 
