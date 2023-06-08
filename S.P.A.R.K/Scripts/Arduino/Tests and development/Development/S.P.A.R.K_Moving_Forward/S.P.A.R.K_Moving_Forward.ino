@@ -1,10 +1,10 @@
 /* S.P.A.R.K moving forward
    Project: S.P.A.R.K
    Start date: 31 May 2023
-   Last edited: 5 June 2023
+   Last edited: 8 June 2023
    Info:
 
-  My third attempt to make S.P.A.R.K walk forward for the first time.
+  My attempt to make S.P.A.R.K walk forward for the first time.
 
   My walking theory:
   ------------------
