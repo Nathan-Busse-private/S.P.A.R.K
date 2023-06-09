@@ -1,7 +1,7 @@
 /* S.P.A.R.K moving forward
    Project: S.P.A.R.K
    Start date: 31 May 2023
-   Last edited: 8 June 2023
+   Last edited: 9 June 2023
    Info:
 
   My attempt to make S.P.A.R.K walk forward for the first time.
@@ -63,23 +63,23 @@
 
 // Define time delay
 #define pause 400
-#define hold 4000
+#define hold 15000
 // Walking position
 
 // Tibia
-#define FT_Rise 60
-#define BT_Rise 60
+#define FT_Rise 50
+#define BT_Rise 50
 #define FT_Lower 70
 #define BT_Lower 70
 
 // Femur
-#define FF_Rise_L 115
-#define BF_Rise_L 115
+#define FF_Rise_L 110
+#define BF_Rise_L 110
 #define FF_Lower_L 135
 #define BF_Lower_L 135
 
-#define FF_Rise_R 45
-#define BF_Rise_R 45
+#define FF_Rise_R 40
+#define BF_Rise_R 40
 #define FF_Lower_R 25
 #define BF_Lower_R 25
 
