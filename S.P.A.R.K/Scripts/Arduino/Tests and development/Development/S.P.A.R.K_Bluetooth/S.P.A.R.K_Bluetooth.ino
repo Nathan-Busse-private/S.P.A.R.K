@@ -52,25 +52,22 @@
 #define FT_stand 70  // Tibia stand
 #define BT_stand 70
 
-// Define time delay
-#define pause 400
-#define hold 500
-// Walking position
+
 
 // Tibia
-#define FT_Rise 50
-#define BT_Rise 50
+#define FT_Rise 60
+#define BT_Rise 60
 #define FT_Lower 70
 #define BT_Lower 70
 
 // Femur
-#define FF_Rise_L 110
-#define BF_Rise_L 110
-#define FF_Lower_L 135
-#define BF_Lower_L 135
+#define FF_Rise_L 115
+#define BF_Rise_L 115
+#define FF_Lower_L 154
+#define BF_Lower_L 154
 
-#define FF_Rise_R 40
-#define BF_Rise_R 40
+#define FF_Rise_R 45
+#define BF_Rise_R 45
 #define FF_Lower_R 25
 #define BF_Lower_R 25
 
@@ -80,7 +77,15 @@
 #define MED_PulseLength 2500
 #define Frequency 50  // 50 HRz
 
+
+
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
+// Define time delay
+#define pause 400
+#define hold 500
+
+unsigned long myTime = 400;//const long interval = 400;
+unsigned long time = 1;//const long interval = 400;
 int degrees;
 int incomingByte = 0;
 int command;   
@@ -141,9 +146,10 @@ break;
 
 case 'F':
 {
-Forward(1);
-//lightFront;
+    
+Forward(time = millis());;
 
+//lightFront;
 Serial.println("Forward");
 //lcd.setCursor(5,19);
 //lcd.println("Forward");
@@ -188,19 +194,24 @@ incomingByte = 'DEC';
 }
 
 
-void Forward(int time)
+void Forward(int time) // <--- Look into here for millis that dould be the solution to the problem
 {
-pwm.setPWM(Coxae_A, 0, pulseWidth(C_idle));
+
+ 
+  
+    
+  pwm.setPWM(Coxae_A, 0, pulseWidth(C_idle));
   pwm.setPWM(Coxae_C, 0, pulseWidth(C_idle));
   pwm.setPWM(Coxae_D, 0, pulseWidth(C_idle));
   pwm.setPWM(Coxae_B, 0, pulseWidth(C_idle));
+//-------------------------------------------------------
 
   // Rise
   pwm.setPWM(Tibia_A, 0, pulseWidth(FT_Rise));
   pwm.setPWM(Tibia_C, 0, pulseWidth(BT_Rise));
   pwm.setPWM(Femur_A, 0, pulseWidth(FF_Rise_L));
   pwm.setPWM(Femur_C, 0, pulseWidth(BF_Rise_R));
-  delay(time);
+//if (currentMillis - previousMillis >= interval) {
 
   pwm.setPWM(Tibia_D, 0, pulseWidth(FT_Rise));
   pwm.setPWM(Tibia_B, 0, pulseWidth(BT_Rise));
@@ -208,18 +219,23 @@ pwm.setPWM(Coxae_A, 0, pulseWidth(C_idle));
   pwm.setPWM(Femur_B, 0, pulseWidth(BF_Rise_L));
 
   // Lower
-  pwm.setPWM(Femur_A, 0, pulseWidth(FF_Lower_L));
+ pwm.setPWM(Femur_A, 0, pulseWidth(FF_Lower_L));
   pwm.setPWM(Femur_C, 0, pulseWidth(BF_Lower_R));
   pwm.setPWM(Tibia_A, 0, pulseWidth(FT_Lower));
   pwm.setPWM(Tibia_C, 0, pulseWidth(BT_Lower));
-  delay(time);
-
+//}
+//if (currentMillis - previousMillis >= interval) {
   pwm.setPWM(Femur_D, 0, pulseWidth(FF_Lower_R));
   pwm.setPWM(Femur_B, 0, pulseWidth(BF_Lower_L));
   pwm.setPWM(Tibia_D, 0, pulseWidth(FT_Lower));
   pwm.setPWM(Tibia_B, 0, pulseWidth(BT_Lower));
-delay(time);
-}
+delay(myTime);
+
+    //delay(1); // <----- not really needed (unless this is really a PC simulation) since you are using millis() already!!!!
+  }
+
+
+
 
 void Backward(int time)
 {
