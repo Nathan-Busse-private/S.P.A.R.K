@@ -55,13 +55,13 @@
 
 // Degres left femur
 #define coxae_l 90
-#define femur_l 179
-#define tibia_l 1
+#define femur_l 180
+#define tibia_l 0
 
 // Degrees right femur
 #define coxae_r 90
-#define femur_r 1
-#define tibia_r 1
+#define femur_r 0
+#define tibia_r 0
 
 //Min and Max pulse values
 #define MIN_PULSE_WIDTH 500
