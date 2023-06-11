@@ -1,7 +1,7 @@
 /* S.P.A.R.K moving forward
    Project: S.P.A.R.K
    Start date: 31 May 2023
-   Last edited: 9 June 2023
+   Last edited: 10 June 2023
    Info:
 
   My attempt to make S.P.A.R.K walk forward for the first time.
@@ -63,7 +63,7 @@
 
 // Define time delay
 #define pause 400
-#define hold 15000
+#define hold 10000
 // Walking position
 
 // Tibia
@@ -73,13 +73,13 @@
 #define BT_Lower 70
 
 // Femur
-#define FF_Rise_L 110
-#define BF_Rise_L 110
-#define FF_Lower_L 135
-#define BF_Lower_L 135
+#define FF_Rise_L 150
+#define BF_Rise_L 150
+#define FF_Lower_L 134
+#define BF_Lower_L 134
 
-#define FF_Rise_R 40
-#define BF_Rise_R 40
+#define FF_Rise_R 46
+#define BF_Rise_R 46
 #define FF_Lower_R 25
 #define BF_Lower_R 25
 
@@ -114,25 +114,20 @@ void setup() {
 }
 
 void loop() {
-
-  //delay(hold);
   // Walking position
-  pwm.setPWM(Coxae_A, 0, pulseWidth(C_idle));
-  pwm.setPWM(Coxae_C, 0, pulseWidth(C_idle));
-  pwm.setPWM(Coxae_D, 0, pulseWidth(C_idle));
-  pwm.setPWM(Coxae_B, 0, pulseWidth(C_idle));
-
-  // Rise
   pwm.setPWM(Tibia_A, 0, pulseWidth(FT_Rise));
   pwm.setPWM(Tibia_C, 0, pulseWidth(BT_Rise));
   pwm.setPWM(Femur_A, 0, pulseWidth(FF_Rise_L));
   pwm.setPWM(Femur_C, 0, pulseWidth(BF_Rise_R));
   delay(pause);
 
-  pwm.setPWM(Tibia_D, 0, pulseWidth(FT_Rise));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(BT_Rise));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FF_Rise_R));
-  pwm.setPWM(Femur_B, 0, pulseWidth(BF_Rise_L));
+
+
+  pwm.setPWM(Femur_B, 0, pulseWidth(FF_Rise_L));
+  pwm.setPWM(Femur_D, 0, pulseWidth(BF_Rise_R));
+
+  pwm.setPWM(Tibia_B, 0, pulseWidth(FT_Rise));
+  pwm.setPWM(Tibia_D, 0, pulseWidth(BT_Rise));
 
   // Lower
   pwm.setPWM(Femur_A, 0, pulseWidth(FF_Lower_L));
@@ -141,10 +136,11 @@ void loop() {
   pwm.setPWM(Tibia_C, 0, pulseWidth(BT_Lower));
   delay(pause);
 
-  pwm.setPWM(Femur_D, 0, pulseWidth(FF_Lower_R));
-  pwm.setPWM(Femur_B, 0, pulseWidth(BF_Lower_L));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(FT_Lower));
+  pwm.setPWM(Femur_B, 0, pulseWidth(FF_Lower_L));
+  pwm.setPWM(Femur_D, 0, pulseWidth(BF_Lower_R));
   pwm.setPWM(Tibia_B, 0, pulseWidth(BT_Lower));
+  pwm.setPWM(Tibia_D, 0, pulseWidth(FT_Lower));
+  delay(pause);
 }
 
 // Pulsewidth declaration
