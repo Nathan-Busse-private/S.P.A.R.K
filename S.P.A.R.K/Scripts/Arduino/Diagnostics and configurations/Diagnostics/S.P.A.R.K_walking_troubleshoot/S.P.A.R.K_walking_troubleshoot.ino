@@ -1,10 +1,12 @@
 /* S.P.A.R.K_walking_troubleshoot
    Project: S.P.A.R.K
    Start date: 11 June 2023
-   Last edited:11 June 2023
+   Last edited:13 June 2023
    Info:
 
 Figuring out the issues with S.P.A.R.K's ability to walk.
+
+Issues have been resolved.
 
    Made by Nathan-Busse
 */
@@ -38,11 +40,11 @@ Figuring out the issues with S.P.A.R.K's ability to walk.
 */
 
 // Left legs
-#define FL_stand 45
+#define FL_stand 135
 #define TL_stand 45
 
 // Right legs
-#define FR_stand 135
+#define FR_stand 45
 #define TR_stand 45
 
 
@@ -52,15 +54,15 @@ Figuring out the issues with S.P.A.R.K's ability to walk.
 
 // Left legs
 #define TL_rise 35
-#define FL_forward 55
+#define FL_forward 130
 #define TL_lower 45
-#define FL_back 45
+#define FL_back 160
 
 // Right legs
 #define TR_rise 35
-#define FR_forward 125
+#define FR_forward 50
 #define TR_lower 45
-#define FR_back 135
+#define FR_back 20
 
 
 /* Coxae positions
@@ -72,7 +74,7 @@ Figuring out the issues with S.P.A.R.K's ability to walk.
 /* Time delay
    ----------
 */
-#define stand 5000
+#define stand 1000
 #define hold 400
 
 /* PWM setup
@@ -116,26 +118,33 @@ void loop() {
   pwm.setPWM(Coxae_C, 0, pulseWidth(CR_idle));
   pwm.setPWM(Coxae_D, 0, pulseWidth(CR_idle));
 
+
+// Back legs
   // Rise
-  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_rise));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_rise));
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_forward));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_forward));
   pwm.setPWM(Tibia_D, 0, pulseWidth(TR_rise));
   pwm.setPWM(Tibia_B, 0, pulseWidth(TL_rise));
   pwm.setPWM(Femur_D, 0, pulseWidth(FR_forward));
   pwm.setPWM(Femur_B, 0, pulseWidth(FL_forward));
+  delay(hold);
 
   // Lower
-  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_lower));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_lower));
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_back));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_back));
   pwm.setPWM(Tibia_D, 0, pulseWidth(TR_lower));
   pwm.setPWM(Tibia_B, 0, pulseWidth(TL_lower));
   pwm.setPWM(Femur_D, 0, pulseWidth(FR_back));
   pwm.setPWM(Femur_B, 0, pulseWidth(FL_back));
 
+// Front legs
+  // Rise
+  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_rise));
+  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_rise));
+  pwm.setPWM(Femur_A, 0, pulseWidth(FL_forward));
+  pwm.setPWM(Femur_C, 0, pulseWidth(FR_forward));
+  delay(hold);
+  // Lower
+  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_lower));
+  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_lower));
+  pwm.setPWM(Femur_A, 0, pulseWidth(FL_back));
+  pwm.setPWM(Femur_C, 0, pulseWidth(FR_back));
   delay(hold);
 }
 

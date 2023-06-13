@@ -1,10 +1,10 @@
-/* S.P.A.R.K moving forward
+/* S.P.A.R.K Moving_Backward
    Project: S.P.A.R.K
-   Start date: 31 May 2023
+   Start date: 13 June 2023
    Last edited: 13 June 2023
    Info:
 
-  My attempt to make S.P.A.R.K walk forward for the first time.
+  My attempt to make S.P.A.R.K walk backward for the first time.
 
   My walking theory:
   ------------------
@@ -82,15 +82,15 @@
 */
 
 // Left legs
-#define TL_rise 35
+#define TL_rise 60
 #define FL_forward 130
-#define TL_lower 45
+#define TL_lower 70
 #define FL_back 160
 
 // Right legs
-#define TR_rise 35
+#define TR_rise 60
 #define FR_forward 50
-#define TR_lower 45
+#define TR_lower 70
 #define FR_back 20
 
 
@@ -192,29 +192,29 @@ void loop() {
   // Rise
   pwm.setPWM(Tibia_D, 0, pulseWidth(TR_rise));
   pwm.setPWM(Tibia_B, 0, pulseWidth(TL_rise));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_forward));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_forward));
+  pwm.setPWM(Femur_D, 0, pulseWidth(FR_back));
+  pwm.setPWM(Femur_B, 0, pulseWidth(FL_back));
   delay(hold);
 
   // Lower
   pwm.setPWM(Tibia_D, 0, pulseWidth(TR_lower));
   pwm.setPWM(Tibia_B, 0, pulseWidth(TL_lower));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_back));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_back));
+  pwm.setPWM(Femur_D, 0, pulseWidth(FR_forward));
+  pwm.setPWM(Femur_B, 0, pulseWidth(FL_forward));
 
 // Front legs
   // Rise
   pwm.setPWM(Tibia_A, 0, pulseWidth(TL_rise));
   pwm.setPWM(Tibia_C, 0, pulseWidth(TR_rise));
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_forward));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_forward));
+  pwm.setPWM(Femur_A, 0, pulseWidth(FL_back));
+  pwm.setPWM(Femur_C, 0, pulseWidth(FR_back));
   delay(hold);
 
   // Lower
   pwm.setPWM(Tibia_A, 0, pulseWidth(TL_lower));
   pwm.setPWM(Tibia_C, 0, pulseWidth(TR_lower));
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_back));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_back));
+  pwm.setPWM(Femur_A, 0, pulseWidth(FL_forward));
+  pwm.setPWM(Femur_C, 0, pulseWidth(FR_forward));
   delay(hold);
 }
 
