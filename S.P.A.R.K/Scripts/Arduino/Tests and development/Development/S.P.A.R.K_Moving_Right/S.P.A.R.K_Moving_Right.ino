@@ -59,21 +59,21 @@
 #define TR_stand 70
 
 
-/* Walking leg positions
+/* Walking RIGHT positions
    ---------------------
 */
 
 // Left legs
-#define TL_rise 50
-#define FL_forward 134
-#define TL_lower 70
-#define FL_back 150
+#define RTL_rise 50
+#define RFL_forward 134
+#define RTL_lower 70
+#define RFL_back 150
 
 // Right legs
-#define TR_rise 50
-#define FR_forward 25
-#define TR_lower 70
-#define FR_back 46
+#define RTR_rise 50
+#define RFR_forward 25
+#define RTR_lower 70
+#define RFR_back 46
 
 
 /* Coxae positions
@@ -175,32 +175,32 @@ void loop() {
   pwm.setPWM(Coxae_D, 0, pulseWidth(CR_idle));
 
   // Rise
-  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_rise));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_rise));
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_forward));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_forward));
+  pwm.setPWM(Tibia_A, 0, pulseWidth(RTL_rise));
+  pwm.setPWM(Tibia_C, 0, pulseWidth(RTR_rise));
+  pwm.setPWM(Femur_A, 0, pulseWidth(RFL_forward));
+  pwm.setPWM(Femur_C, 0, pulseWidth(RFR_forward));
   delay(hold);
 
 
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_forward));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_forward));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_rise));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_rise));
+  pwm.setPWM(Femur_D, 0, pulseWidth(RFR_forward));
+  pwm.setPWM(Femur_B, 0, pulseWidth(RFL_forward));
+  pwm.setPWM(Tibia_D, 0, pulseWidth(RTR_rise));
+  pwm.setPWM(Tibia_B, 0, pulseWidth(RTL_rise));
   //delay(hold);
 
   // Lower
 
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_back));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_back));
-  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_lower));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_lower));
+  pwm.setPWM(Femur_A, 0, pulseWidth(RFL_back));
+  pwm.setPWM(Femur_C, 0, pulseWidth(RFR_back));
+  pwm.setPWM(Tibia_A, 0, pulseWidth(RTL_lower));
+  pwm.setPWM(Tibia_C, 0, pulseWidth(RTR_lower));
   delay(hold);
 
 
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_back));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_back));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_lower));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_lower));
+  pwm.setPWM(Femur_D, 0, pulseWidth(RFR_back));
+  pwm.setPWM(Femur_B, 0, pulseWidth(RFL_back));
+  pwm.setPWM(Tibia_D, 0, pulseWidth(RTR_lower));
+  pwm.setPWM(Tibia_B, 0, pulseWidth(RTL_lower));
   delay(hold);
 }
 
