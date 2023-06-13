@@ -1,30 +1,19 @@
-/* S.P.A.R.K moving forward
+/* S.P.A.R.K_Moving_Right
    Project: S.P.A.R.K
-   Start date: 31 May 2023
+   Start date: 13 June 2023
    Last edited: 13 June 2023
    Info:
 
-  My attempt to make S.P.A.R.K walk forward for the first time.
-
-  My walking theory:
-  ------------------
-  Their will be 2 legs touching the ground and 2 in the air for each step.
-  The 2 legs will operate in sync with the other leg diagnal from its partner.
-  For example:
-
-  Leg A will partner with Leg C
-  Leg B will partner with Leg D.
-
-  The Tibia of the paired legs will lift first and the Femur will then lift second. 
-  Once the second pair of legs begin to lift, the already raised Femur will then lower
-  first then the Tibia will lower second which follows on indefinitly, thus making the robot walk.
-
-  Made by Nathan-Busse.
+    S.P.A.R.K turning right
+     Made by Nathan-Busse
 */
 
 // Calling Libraries
+
 #include <Adafruit_PWMServoDriver.h>
 #include <Wire.h>
+
+// Declaring pins
 
 // Pin declarations
 #define Coxae_A 0
@@ -43,12 +32,6 @@
 #define Femur_D 13
 #define Tibia_D 14
 
-/* Coxae positions
-   ---------------
-*/
-#define CL_idle 90
-#define CR_idle 90
-
 /* Resting leg position
    --------------------
 */
@@ -62,7 +45,6 @@
 #define coxae_r 90
 #define femur_r 0
 #define tibia_r 0
-
 
 /* Standing leg positions
    ----------------------
@@ -82,19 +64,23 @@
 */
 
 // Left legs
-#define TL_rise 35
-#define FL_forward 130
-#define TL_lower 45
-#define FL_back 160
+#define TL_rise 50
+#define FL_forward 134
+#define TL_lower 70
+#define FL_back 150
 
 // Right legs
-#define TR_rise 35
-#define FR_forward 50
-#define TR_lower 45
-#define FR_back 20
+#define TR_rise 50
+#define FR_forward 25
+#define TR_lower 70
+#define FR_back 46
 
 
-
+/* Coxae positions
+   ---------------
+*/
+#define CL_idle 90
+#define CR_idle 90
 
 /* Time delay
    ----------
@@ -179,6 +165,7 @@ void setup() {
   delay(stand);
 }
 
+
 void loop() {
 
   // Walking
@@ -187,22 +174,6 @@ void loop() {
   pwm.setPWM(Coxae_C, 0, pulseWidth(CR_idle));
   pwm.setPWM(Coxae_D, 0, pulseWidth(CR_idle));
 
-
-// Back legs
-  // Rise
-  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_rise));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_rise));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_forward));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_forward));
-  delay(hold);
-
-  // Lower
-  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_lower));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_lower));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_back));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_back));
-
-// Front legs
   // Rise
   pwm.setPWM(Tibia_A, 0, pulseWidth(TL_rise));
   pwm.setPWM(Tibia_C, 0, pulseWidth(TR_rise));
@@ -210,11 +181,26 @@ void loop() {
   pwm.setPWM(Femur_C, 0, pulseWidth(FR_forward));
   delay(hold);
 
+
+  pwm.setPWM(Femur_D, 0, pulseWidth(FR_forward));
+  pwm.setPWM(Femur_B, 0, pulseWidth(FL_forward));
+  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_rise));
+  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_rise));
+  //delay(hold);
+
   // Lower
-  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_lower));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_lower));
+
   pwm.setPWM(Femur_A, 0, pulseWidth(FL_back));
   pwm.setPWM(Femur_C, 0, pulseWidth(FR_back));
+  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_lower));
+  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_lower));
+  delay(hold);
+
+
+  pwm.setPWM(Femur_D, 0, pulseWidth(FR_back));
+  pwm.setPWM(Femur_B, 0, pulseWidth(FL_back));
+  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_lower));
+  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_lower));
   delay(hold);
 }
 
