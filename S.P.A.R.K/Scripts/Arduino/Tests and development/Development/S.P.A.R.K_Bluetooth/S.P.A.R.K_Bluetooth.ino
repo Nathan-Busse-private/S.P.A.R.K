@@ -1,7 +1,7 @@
 /* S.P.A.R.K_Bluetooth
    Project: S.P.A.R.K
    Start date: 5 June 2023
-   Last edited: 12 June 2023
+   Last edited: 14 June 2023
    Info:
 
    Experimenting how to make S.P.A.R.K walk by manual control via Bluetooth.
@@ -70,13 +70,13 @@
 */
 
 // Left legs
-#define BTL_rise 60
+#define BTL_rise 45
 #define BFL_forward 130
 #define BTL_lower 70
 #define BFL_back 160
 
 // Right legs
-#define BTR_rise 60
+#define BTR_rise 45
 #define BFR_forward 50
 #define BTR_lower 70
 #define BFR_back 20
