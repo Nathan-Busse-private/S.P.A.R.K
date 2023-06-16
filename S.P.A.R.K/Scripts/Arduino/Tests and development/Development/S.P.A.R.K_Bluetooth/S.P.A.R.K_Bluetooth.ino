@@ -1,7 +1,7 @@
 /* S.P.A.R.K_Bluetooth
    Project: S.P.A.R.K
    Start date: 5 June 2023
-   Last edited: 14 June 2023
+   Last edited: 16 June 2023
    Info:
 
    Experimenting how to make S.P.A.R.K walk by manual control via Bluetooth.
@@ -158,8 +158,10 @@ SoftwareSerial bluetooth(bluetoothTx, bluetoothRx);
 
 char command;  //variable to store the data
 
-unsigned long previousMillis = 400;
-const long interval = 0;
+int previousMillisServo = 0;
+int pos = 0;
+long servoInterval = 400;
+unsigned long currentMillis = 0;
 
 void setup() {
   pwm.begin();
@@ -220,6 +222,8 @@ void loop() {
     /* Walking commands
        ----------------
     */
+
+    currentMillis = millis();
     switch (command) {
       case 'F':  //Moving the Car Forward
         forward();
@@ -450,11 +454,22 @@ void right() {
   pwm.setPWM(Tibia_B, 0, pulseWidth(RTL_lower));
   wait_all_reach();
 }
+
 void wait_reach() {
   //while (1)
-  delay(hold);
-}
+  //delay(hold);
 
+  if (currentMillis - previousMillisServo > servoInterval) {
+    previousMillisServo = currentMillis;
+    for (pos = 0; pos = pulseWidth;) {
+      bluetooth.read();  //delay(15);
+    }
+    for (pos = 0; pos = pulseWidth;) {
+      bluetooth.read();  //delay(15);
+        //delay(15);
+    }
+  }
+}
 /* Wail till all servos to finish movinng.
    --------------------------------------
 */
