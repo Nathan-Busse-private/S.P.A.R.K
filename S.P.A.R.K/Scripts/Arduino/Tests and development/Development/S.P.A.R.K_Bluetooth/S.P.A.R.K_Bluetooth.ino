@@ -1,7 +1,7 @@
 /* S.P.A.R.K_Bluetooth
    Project: S.P.A.R.K
    Start date: 5 June 2023
-   Last edited: 18 June 2023
+   Last edited: 19 June 2023
    Info:
 
    Experimenting how to make S.P.A.R.K walk by manual control via Bluetooth.
@@ -44,13 +44,13 @@
 
 // Degres left femur
 #define coxae_l 90
-#define femur_l 180
-#define tibia_l 0
+#define femur_l 179
+#define tibia_l 1
 
 // Degrees right femur
 #define coxae_r 90
-#define femur_r 0
-#define tibia_r 0
+#define femur_r 1
+#define tibia_r 1
 
 
 /* Standing leg positions
@@ -134,8 +134,9 @@
    ----------
 */
 #define stand 4000
-#define hold 400
 #define rest 4000
+#define move 300
+#define rotate 200
 
 /* PWM setup
    ---------
@@ -314,6 +315,8 @@ void stop() {
 
 void forward() {
 
+ 
+  // Walking forward
   pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));
   pwm.setPWM(Coxae_B, 0, pulseWidth(CL_idle));
   pwm.setPWM(Coxae_C, 0, pulseWidth(CR_idle));
@@ -326,7 +329,7 @@ void forward() {
   pwm.setPWM(Tibia_B, 0, pulseWidth(FTL_rise));
   pwm.setPWM(Femur_D, 0, pulseWidth(FFR_forward));
   pwm.setPWM(Femur_B, 0, pulseWidth(FFL_forward));
-  wait_all_reach();
+  walk();
 
   // Lower
   pwm.setPWM(Tibia_D, 0, pulseWidth(FTR_lower));
@@ -340,14 +343,14 @@ void forward() {
   pwm.setPWM(Tibia_C, 0, pulseWidth(FTR_rise));
   pwm.setPWM(Femur_A, 0, pulseWidth(FFL_forward));
   pwm.setPWM(Femur_C, 0, pulseWidth(FFR_forward));
-  wait_all_reach();
+  walk();
 
   // Lower
   pwm.setPWM(Tibia_A, 0, pulseWidth(FTL_lower));
   pwm.setPWM(Tibia_C, 0, pulseWidth(FTR_lower));
   pwm.setPWM(Femur_A, 0, pulseWidth(FFL_back));
   pwm.setPWM(Femur_C, 0, pulseWidth(FFR_back));
-  wait_all_reach();
+  walk();
 }
 
 void back() {
@@ -363,7 +366,7 @@ void back() {
   pwm.setPWM(Tibia_B, 0, pulseWidth(BTL_rise));
   pwm.setPWM(Femur_D, 0, pulseWidth(BFR_back));
   pwm.setPWM(Femur_B, 0, pulseWidth(BFL_back));
-  wait_all_reach();
+  walk();
 
   // Lower
   pwm.setPWM(Tibia_D, 0, pulseWidth(BTR_lower));
@@ -377,14 +380,14 @@ void back() {
   pwm.setPWM(Tibia_C, 0, pulseWidth(BTR_rise));
   pwm.setPWM(Femur_A, 0, pulseWidth(BFL_back));
   pwm.setPWM(Femur_C, 0, pulseWidth(BFR_back));
-  wait_all_reach();
+  walk();
 
   // Lower
   pwm.setPWM(Tibia_A, 0, pulseWidth(BTL_lower));
   pwm.setPWM(Tibia_C, 0, pulseWidth(BTR_lower));
   pwm.setPWM(Femur_A, 0, pulseWidth(BFL_forward));
   pwm.setPWM(Femur_C, 0, pulseWidth(BFR_forward));
-  wait_all_reach();
+  walk();
 }
 
 void left() {
@@ -398,7 +401,7 @@ void left() {
   pwm.setPWM(Tibia_C, 0, pulseWidth(LTR_rise));
   pwm.setPWM(Femur_A, 0, pulseWidth(LFL_forward));
   pwm.setPWM(Femur_C, 0, pulseWidth(LFR_forward));
-  wait_all_reach();
+  turn();
 
 
   pwm.setPWM(Femur_D, 0, pulseWidth(LFR_forward));
@@ -411,14 +414,14 @@ void left() {
   pwm.setPWM(Femur_C, 0, pulseWidth(LFR_back));
   pwm.setPWM(Tibia_A, 0, pulseWidth(LTL_lower));
   pwm.setPWM(Tibia_C, 0, pulseWidth(LTR_lower));
-  wait_all_reach();
+  turn();
 
 
   pwm.setPWM(Femur_D, 0, pulseWidth(LFR_back));
   pwm.setPWM(Femur_B, 0, pulseWidth(LFL_back));
   pwm.setPWM(Tibia_D, 0, pulseWidth(LTR_lower));
   pwm.setPWM(Tibia_B, 0, pulseWidth(LTL_lower));
-  wait_all_reach();
+  turn();
 }
 
 void right() {
@@ -432,7 +435,7 @@ void right() {
   pwm.setPWM(Tibia_C, 0, pulseWidth(RTR_rise));
   pwm.setPWM(Femur_A, 0, pulseWidth(RFL_forward));
   pwm.setPWM(Femur_C, 0, pulseWidth(RFR_forward));
-  wait_all_reach();
+  turn();
 
 
   pwm.setPWM(Femur_D, 0, pulseWidth(RFR_forward));
@@ -445,19 +448,22 @@ void right() {
   pwm.setPWM(Femur_C, 0, pulseWidth(RFR_back));
   pwm.setPWM(Tibia_A, 0, pulseWidth(RTL_lower));
   pwm.setPWM(Tibia_C, 0, pulseWidth(RTR_lower));
-  wait_all_reach();
+  turn();
 
 
   pwm.setPWM(Femur_D, 0, pulseWidth(RFR_back));
   pwm.setPWM(Femur_B, 0, pulseWidth(RFL_back));
   pwm.setPWM(Tibia_D, 0, pulseWidth(RTR_lower));
   pwm.setPWM(Tibia_B, 0, pulseWidth(RTL_lower));
-  wait_all_reach();
+  turn();
 }
 
-void wait_reach() {
+void walking() {
   //while (1)
-  //delay(hold);
+
+  delay(move);
+
+  /*
 
   if (currentMillis - previousMillisServo > servoInterval) {
     previousMillisServo = currentMillis;
@@ -469,14 +475,63 @@ void wait_reach() {
         //delay(15);
     }
   }
+
+  */
 }
 /* Wail till all servos to finish movinng.
    --------------------------------------
 */
-void wait_all_reach(void) {
-  wait_reach();
+
+
+
+/* Wail till all servos to finish movinng.
+   --------------------------------------
+*/
+void walk(void) {
+  walking();
 }
 
+void turning() {
+  //while (1)
+
+  delay(rotate);
+
+  /*
+
+  if (currentMillis - previousMillisServo > servoInterval) {
+    previousMillisServo = currentMillis;
+    for (pos = 0; pos = pulseWidth;) {
+      bluetooth.read();  //delay(15);
+    }
+    for (pos = 0; pos = pulseWidth;) {
+      bluetooth.read();  //delay(15);
+        //delay(15);
+    }
+  }
+
+  */
+}
+
+void turn() {
+  //while (1)
+
+  turning();
+
+  /*
+
+  if (currentMillis - previousMillisServo > servoInterval) {
+    previousMillisServo = currentMillis;
+    for (pos = 0; pos = pulseWidth;) {
+      bluetooth.read();  //delay(15);
+    }
+    for (pos = 0; pos = pulseWidth;) {
+      bluetooth.read();  //delay(15);
+        //delay(15);
+    }
+  }
+
+  */
+}
 /* Pulsewidth declaration
    ----------------------
 */
