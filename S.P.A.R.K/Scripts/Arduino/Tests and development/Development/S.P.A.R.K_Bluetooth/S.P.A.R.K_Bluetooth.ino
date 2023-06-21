@@ -1,7 +1,7 @@
 /* S.P.A.R.K_Bluetooth
    Project: S.P.A.R.K
    Start date: 5 June 2023
-   Last edited: 19 June 2023
+   Last edited: 21 June 2023
    Info:
 
    Experimenting how to make S.P.A.R.K walk by manual control via Bluetooth.
@@ -70,13 +70,13 @@
 */
 
 // Left legs
-#define BTL_rise 45
+#define BTL_rise 50
 #define BFL_forward 130
 #define BTL_lower 70
 #define BFL_back 160
 
 // Right legs
-#define BTR_rise 45
+#define BTR_rise 50
 #define BFR_forward 50
 #define BTR_lower 70
 #define BFR_back 20
@@ -86,15 +86,15 @@
 */
 
 // Left legs
-#define FTL_rise 35
+#define FTL_rise 50
 #define FFL_forward 130
-#define FTL_lower 45
+#define FTL_lower 70
 #define FFL_back 160
 
 // Right legs
-#define FTR_rise 35
+#define FTR_rise 50
 #define FFR_forward 50
-#define FTR_lower 45
+#define FTR_lower 70
 #define FFR_back 20
 
 /* Walking LEFT leg positions
@@ -135,7 +135,7 @@
 */
 #define stand 4000
 #define rest 4000
-#define move 300
+#define move 400
 #define rotate 200
 
 /* PWM setup
@@ -350,7 +350,7 @@ void forward() {
   pwm.setPWM(Tibia_C, 0, pulseWidth(FTR_lower));
   pwm.setPWM(Femur_A, 0, pulseWidth(FFL_back));
   pwm.setPWM(Femur_C, 0, pulseWidth(FFR_back));
-  walk();
+  //walk();
 }
 
 void back() {
@@ -387,7 +387,7 @@ void back() {
   pwm.setPWM(Tibia_C, 0, pulseWidth(BTR_lower));
   pwm.setPWM(Femur_A, 0, pulseWidth(BFL_forward));
   pwm.setPWM(Femur_C, 0, pulseWidth(BFR_forward));
-  walk();
+ // walk();
 }
 
 void left() {
@@ -421,7 +421,7 @@ void left() {
   pwm.setPWM(Femur_B, 0, pulseWidth(LFL_back));
   pwm.setPWM(Tibia_D, 0, pulseWidth(LTR_lower));
   pwm.setPWM(Tibia_B, 0, pulseWidth(LTL_lower));
-  turn();
+  //turn();
 }
 
 void right() {
@@ -455,7 +455,7 @@ void right() {
   pwm.setPWM(Femur_B, 0, pulseWidth(RFL_back));
   pwm.setPWM(Tibia_D, 0, pulseWidth(RTR_lower));
   pwm.setPWM(Tibia_B, 0, pulseWidth(RTL_lower));
-  turn();
+  //turn();
 }
 
 void walking() {
