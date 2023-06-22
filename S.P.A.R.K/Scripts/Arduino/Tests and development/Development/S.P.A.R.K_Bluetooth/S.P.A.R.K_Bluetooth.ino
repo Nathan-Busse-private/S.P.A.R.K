@@ -1,7 +1,7 @@
 /* S.P.A.R.K_Bluetooth
    Project: S.P.A.R.K
    Start date: 5 June 2023
-   Last edited: 21 June 2023
+   Last edited: 22 June 2023
    Info:
 
    Experimenting how to make S.P.A.R.K walk by manual control via Bluetooth.
@@ -44,13 +44,13 @@
 
 // Degres left femur
 #define coxae_l 90
-#define femur_l 179
-#define tibia_l 1
+#define femur_l 180
+#define tibia_l 0
 
 // Degrees right femur
 #define coxae_r 90
-#define femur_r 1
-#define tibia_r 1
+#define femur_r 0
+#define tibia_r 0
 
 
 /* Standing leg positions
