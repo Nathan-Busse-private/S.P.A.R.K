@@ -103,9 +103,9 @@
 
 // Left legs
 #define LTL_rise 50
-#define LFL_forward 154  // 155
+#define LFL_forward 160  // 155
 #define LTL_lower 70
-#define LFL_back 150
+#define LFL_back 130
 
 // Right legs
 #define LTR_rise 50
@@ -135,7 +135,7 @@
 */
 #define stand 4000
 #define rest 4000
-#define move 400
+#define move 300
 #define rotate 200
 
 /* PWM setup
