@@ -1,7 +1,7 @@
 /* S.P.A.R.K_Bluetooth
    Project: S.P.A.R.K
    Start date: 5 June 2023
-   Last edited: 23 June 2023
+   Last edited: 24 June 2023
    Info:
 
    Experimenting how to make S.P.A.R.K walk by manual control via Bluetooth.
