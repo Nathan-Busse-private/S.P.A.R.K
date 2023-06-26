@@ -1,7 +1,7 @@
 /* S.P.A.R.K_Bluetooth
    Project: S.P.A.R.K
    Start date: 5 June 2023
-   Last edited: 23 June 2023
+   Last edited: 26 June 2023
    Info:
 
    Experimenting how to make S.P.A.R.K walk by manual control via Bluetooth.
@@ -315,7 +315,43 @@ void stop() {
 
 void forward() {
 
- 
+
+  // Walking forward
+  pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(CL_idle));
+  pwm.setPWM(Coxae_C, 0, pulseWidth(CR_idle));
+  pwm.setPWM(Coxae_D, 0, pulseWidth(CR_idle));
+
+
+  // Back legs
+  // Rise
+  pwm.setPWM(Tibia_D, 0, pulseWidth(FTR_rise));
+  pwm.setPWM(Tibia_B, 0, pulseWidth(FTL_rise));
+  pwm.setPWM(Femur_D, 0, pulseWidth(FFR_forward));
+  pwm.setPWM(Femur_B, 0, pulseWidth(FFL_forward));
+  walk();
+
+  // Lower
+  pwm.setPWM(Tibia_D, 0, pulseWidth(FTR_lower));
+  pwm.setPWM(Tibia_B, 0, pulseWidth(FTL_lower));
+  pwm.setPWM(Femur_D, 0, pulseWidth(FFR_back));
+  pwm.setPWM(Femur_B, 0, pulseWidth(FFL_back));
+
+  // Front legs
+  // Rise
+  pwm.setPWM(Tibia_A, 0, pulseWidth(FTL_rise));
+  pwm.setPWM(Tibia_C, 0, pulseWidth(FTR_rise));
+  pwm.setPWM(Femur_A, 0, pulseWidth(FFL_forward));
+  pwm.setPWM(Femur_C, 0, pulseWidth(FFR_forward));
+  walk();
+
+  // Lower
+  pwm.setPWM(Tibia_A, 0, pulseWidth(FTL_lower));
+  pwm.setPWM(Tibia_C, 0, pulseWidth(FTR_lower));
+  pwm.setPWM(Femur_A, 0, pulseWidth(FFL_back));
+  pwm.setPWM(Femur_C, 0, pulseWidth(FFR_back));
+  //walk();
+
   // Walking forward
   pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));
   pwm.setPWM(Coxae_B, 0, pulseWidth(CL_idle));
@@ -387,7 +423,42 @@ void back() {
   pwm.setPWM(Tibia_C, 0, pulseWidth(BTR_lower));
   pwm.setPWM(Femur_A, 0, pulseWidth(BFL_forward));
   pwm.setPWM(Femur_C, 0, pulseWidth(BFR_forward));
- // walk();
+  // walk();
+
+  pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(CL_idle));
+  pwm.setPWM(Coxae_C, 0, pulseWidth(CR_idle));
+  pwm.setPWM(Coxae_D, 0, pulseWidth(CR_idle));
+
+
+  // Back legs
+  // Rise
+  pwm.setPWM(Tibia_D, 0, pulseWidth(BTR_rise));
+  pwm.setPWM(Tibia_B, 0, pulseWidth(BTL_rise));
+  pwm.setPWM(Femur_D, 0, pulseWidth(BFR_back));
+  pwm.setPWM(Femur_B, 0, pulseWidth(BFL_back));
+  walk();
+
+  // Lower
+  pwm.setPWM(Tibia_D, 0, pulseWidth(BTR_lower));
+  pwm.setPWM(Tibia_B, 0, pulseWidth(BTL_lower));
+  pwm.setPWM(Femur_D, 0, pulseWidth(BFR_forward));
+  pwm.setPWM(Femur_B, 0, pulseWidth(BFL_forward));
+
+  // Front legs
+  // Rise
+  pwm.setPWM(Tibia_A, 0, pulseWidth(BTL_rise));
+  pwm.setPWM(Tibia_C, 0, pulseWidth(BTR_rise));
+  pwm.setPWM(Femur_A, 0, pulseWidth(BFL_back));
+  pwm.setPWM(Femur_C, 0, pulseWidth(BFR_back));
+  walk();
+
+  // Lower
+  pwm.setPWM(Tibia_A, 0, pulseWidth(BTL_lower));
+  pwm.setPWM(Tibia_C, 0, pulseWidth(BTR_lower));
+  pwm.setPWM(Femur_A, 0, pulseWidth(BFL_forward));
+  pwm.setPWM(Femur_C, 0, pulseWidth(BFR_forward));
+  // walk();
 }
 
 void left() {
