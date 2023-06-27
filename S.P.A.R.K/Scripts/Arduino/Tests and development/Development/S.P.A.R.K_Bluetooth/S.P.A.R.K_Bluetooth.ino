@@ -315,13 +315,11 @@ void stop() {
 
 void forward() {
 
-
   // Walking forward
   pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));
   pwm.setPWM(Coxae_B, 0, pulseWidth(CL_idle));
   pwm.setPWM(Coxae_C, 0, pulseWidth(CR_idle));
   pwm.setPWM(Coxae_D, 0, pulseWidth(CR_idle));
-
 
   // Back legs
   // Rise
@@ -474,7 +472,6 @@ void left() {
   pwm.setPWM(Femur_C, 0, pulseWidth(LFR_forward));
   turn();
 
-
   pwm.setPWM(Femur_D, 0, pulseWidth(LFR_forward));
   pwm.setPWM(Femur_B, 0, pulseWidth(LFL_forward));
   pwm.setPWM(Tibia_D, 0, pulseWidth(LTR_rise));
@@ -486,7 +483,6 @@ void left() {
   pwm.setPWM(Tibia_A, 0, pulseWidth(LTL_lower));
   pwm.setPWM(Tibia_C, 0, pulseWidth(LTR_lower));
   turn();
-
 
   pwm.setPWM(Femur_D, 0, pulseWidth(LFR_back));
   pwm.setPWM(Femur_B, 0, pulseWidth(LFL_back));
@@ -508,7 +504,6 @@ void right() {
   pwm.setPWM(Femur_C, 0, pulseWidth(RFR_forward));
   turn();
 
-
   pwm.setPWM(Femur_D, 0, pulseWidth(RFR_forward));
   pwm.setPWM(Femur_B, 0, pulseWidth(RFL_forward));
   pwm.setPWM(Tibia_D, 0, pulseWidth(RTR_rise));
@@ -520,7 +515,6 @@ void right() {
   pwm.setPWM(Tibia_A, 0, pulseWidth(RTL_lower));
   pwm.setPWM(Tibia_C, 0, pulseWidth(RTR_lower));
   turn();
-
 
   pwm.setPWM(Femur_D, 0, pulseWidth(RFR_back));
   pwm.setPWM(Femur_B, 0, pulseWidth(RFL_back));

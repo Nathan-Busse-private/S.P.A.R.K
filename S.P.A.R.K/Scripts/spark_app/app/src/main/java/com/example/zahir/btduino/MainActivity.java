@@ -277,9 +277,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (brake.isChecked()) {
-                    writeData("N");
+                    writeData("V");
                 } else {
-                    writeData("D");
+                    writeData("S");
                 }
             }
         });
