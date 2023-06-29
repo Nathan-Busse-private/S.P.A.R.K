@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
                     writeData("E");
                 }
                 else{
-                    writeData("e");
+                    writeData("Z");
                 }
             }
         });
@@ -279,7 +279,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (brake.isChecked()) {
-                    writeData("V");
+                    writeData("W");
                 } else {
                     writeData("S");
                 }
@@ -309,10 +309,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(light.isChecked()){
-                    writeData("K");
+                    writeData("Z");
                 }
                 else{
-                    writeData("k");
+                    writeData("S");
                 }
             }
         });

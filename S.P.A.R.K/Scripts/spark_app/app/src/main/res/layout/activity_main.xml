@@ -170,7 +170,8 @@
             android:layout_below="@+id/btnHorn"
             android:textColor="@android:color/black"
             android:textSize="20sp"
-            android:textStyle="normal" />
+            android:textStyle="normal"
+            android:layout_alignLeft="@+id/btnUp" />
 
         <ToggleButton
             android:id="@+id/btnBrake"
