@@ -1,9 +1,11 @@
-package com.example.zahir.btduino;
+package com.example.nathan.spark;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Vibrator;
 import android.preference.PreferenceActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -288,10 +290,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    horn.setBackgroundResource(R.drawable.horn);
-                    writeData("H");
+                    String url = "https://github.com/Nathan-Busse";
+                    Uri uri = Uri.parse(url);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    // Verify that the intent will resolve to an activity
+                    if (intent.resolveActivity(getPackageManager()) != null) {
+                        // Here we use an intent without a Chooser unlike the next example
+                        startActivity(intent);
+                    }
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    writeData("h");
                     horn.setBackgroundResource(R.drawable.horn0);
                 }
                 return false;

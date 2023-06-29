@@ -166,13 +166,11 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/btnDown"
-            android:layout_alignEnd="@+id/btnRight"
-            android:text="Made by Nathan Busse  v0.2"
+            android:layout_alignStart="@+id/btnUp"
+            android:layout_below="@+id/btnHorn"
             android:textColor="@android:color/black"
             android:textSize="20sp"
-            android:textStyle="normal"
-            android:layout_alignRight="@+id/btnRight" />
+            android:textStyle="normal" />
 
         <ToggleButton
             android:id="@+id/btnBrake"
