@@ -3,7 +3,7 @@
 Bluetooth_echo
 Project: S.P.A.R.K 
 Start date: 30 June 2023
-Last edited: 30 June 2023
+Last edited: 31 June 2023
 Script name: Bluetooth_echo
 Info:
 
