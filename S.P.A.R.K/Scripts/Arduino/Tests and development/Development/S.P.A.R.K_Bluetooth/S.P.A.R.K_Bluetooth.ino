@@ -1,7 +1,7 @@
 /* S.P.A.R.K_Bluetooth
    Project: S.P.A.R.K
    Start date: 5 June 2023
-   Last edited: 10 July 2023
+   Last edited: 11 July 2023
    Info:
 
    Experimenting how to make S.P.A.R.K walk by manual control via Bluetooth.
@@ -63,7 +63,7 @@
 
 // Right legs
 #define FR_stand 45
-#define TR_stand 70
+#define TR_stand 110
 
 /* Walking BACK leg positions
    --------------------------
@@ -76,9 +76,9 @@
 #define BFL_back 160
 
 // Right legs
-#define BTR_rise 50
+#define BTR_rise 130
 #define BFR_forward 50
-#define BTR_lower 70
+#define BTR_lower 110
 #define BFR_back 20
 
 /* Walking FORWARD leg positions
@@ -92,9 +92,9 @@
 #define FFL_back 160
 
 // Right legs
-#define FTR_rise 50
+#define FTR_rise 130
 #define FFR_forward 50
-#define FTR_lower 70
+#define FTR_lower 110
 #define FFR_back 20
 
 /* Walking LEFT leg positions
@@ -108,9 +108,9 @@
 #define LFL_back 130
 
 // Right legs
-#define LTR_rise 50
+#define LTR_rise 130
 #define LFR_forward 45  // 45
-#define LTR_lower 70
+#define LTR_lower 110
 #define LFR_back 30
 
 /* Walking RIGHT positions
@@ -124,9 +124,9 @@
 #define RFL_back 150
 
 // Right legs
-#define RTR_rise 50
+#define RTR_rise 130
 #define RFR_forward 25
-#define RTR_lower 70
+#define RTR_lower 110
 #define RFR_back 46
 
 
