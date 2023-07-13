@@ -4,7 +4,19 @@ A robot dog with a heart.
 
 # TO DO:
 
- Markup : 1. A numbered list
-              1. A nested numbered list
-              2. Which is numbered
-          2. Which is numbered
+- [ ] An uncompleted task
+- [x] A completed task
+
+~~~
+ Markup : - [ ] An uncompleted task
+          - [x] A completed task
+~~~
+
+- [ ] An uncompleted task
+    - [ ] A subtask
+
+~~~
+ Markup : - [ ] An uncompleted task
+              - [ ] A subtask
+~~~
+
