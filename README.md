@@ -3,3 +3,6 @@
 A robot dog with a heart.
 
 # TO DO:
+
+Markup : - [ ] An uncompleted task
+         - [x] A completed task
