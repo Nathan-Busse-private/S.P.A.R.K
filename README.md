@@ -4,10 +4,6 @@ A robot dog with a heart.
 
 # TO DO:
 
-- [ ] An uncompleted task
-- [x] A completed task
-
-
 - [ ]  Fix doesn't transmit stop commsnd automatically after connection in app bug.
 - [ ]  Fix Transmission not sent when button is held down in app bug.
 - [ ]  Replace delay function with millis.
