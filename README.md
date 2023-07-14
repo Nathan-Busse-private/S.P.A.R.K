@@ -5,6 +5,7 @@ A robot dog with a heart.
 # TO DO:
 
 - [ ]  Build a disributable apk file for the app
+- [ ]  Create a Build history directory for the app
 - [ ]  Fix doesn't transmit stop commsnd automatically after connection in app bug.
 - [ ]  Fix Transmission not sent when button is held down in app bug.
 - [ ]  Replace delay function with millis.
