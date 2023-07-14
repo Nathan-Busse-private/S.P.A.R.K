@@ -8,9 +8,10 @@ A robot dog with a heart.
 - [x] A completed task
 
 ~~~
- Markup : - [ ] An uncompleted task
-          - [x] A completed task
-~~~
+Patch doesn't transmit stop commsnd automatically after connection in app bug. [x]
+~~~ 
+- [ ] Patch doesn't transmit stop commsnd automatically after connection in app bug. [x]
+
 
 - [ ] An uncompleted task
     - [ ] A subtask
