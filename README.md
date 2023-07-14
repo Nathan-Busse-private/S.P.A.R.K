@@ -7,10 +7,14 @@ A robot dog with a heart.
 - [ ] An uncompleted task
 - [x] A completed task
 
-~~~
-Patch doesn't transmit stop commsnd automatically after connection in app bug. [x]
-~~~ 
-- [ ] Patch doesn't transmit stop commsnd automatically after connection in app bug. [x]
+
+- [ ]  Patch doesn't transmit stop commsnd automatically after connection in app bug.
+- [ ]  Patch Transmission not sent when button is held down in app bug.
+- [ ]  Replace delay function with millis.
+- [ ]  Improve walk
+
+- [ ]  Create PID algorithm to adjust IK to allow S.P.A.R.K naviagate uneven terrain better
+- [ ]  Implement PID algorithm.
 
 
 - [ ] An uncompleted task
