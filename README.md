@@ -4,7 +4,7 @@ A robot dog with a heart.
 
 # TO DO:
 
-- [ ] Change S.P.A.R.K logo.
+- [ ]  Redesign S.P.A.R.K logo.
 - [ ]  Build a disributable apk file for the app.
 - [ ]  Create a Build history directory for the app.
 - [ ]  Fix doesn't transmit stop commsnd automatically after connection in app bug.
