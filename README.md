@@ -12,7 +12,7 @@ A robot dog with a heart.
 - [ ]  Fix Transmission not sent when button is held down in app bug.
 - [ ]  Replace delay function with millis.
 - [ ]  Improve walking gaits
-- [ ]  Create PID algorithm to adjust IK to help S.P.A.R.K to naviagate uneven terrain better
+- [ ]  Create PID algorithm to adjust IK to help S.P.A.R.K naviagate uneven terrain better
 - [ ]  Implement PID algorithm.
 
 
