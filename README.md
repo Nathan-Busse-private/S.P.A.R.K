@@ -1,5 +1,5 @@
+![logo](https://github.com/Nathan-Busse-private/S.P.A.R.K/assets/82398683/5ae9812e-52db-4cab-8d8a-45c9495b9309)
 
-![splash](https://github.com/Nathan-Busse-private/S.P.A.R.K/assets/82398683/74f404fa-4832-449a-aaf1-10caba48064b)
 A robot dog with a heart.
 
 # TO DO:
