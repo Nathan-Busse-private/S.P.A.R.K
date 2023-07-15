@@ -24,6 +24,9 @@ Java
 Python
 -----------
 
-- [ ] Work on object detection
-- [ ] Work on body tracker
-- [ ] Work on hand tracker
+- [ ]  Work on object detection
+- [ ]  Work on body tracker
+- [ ]  Work on hand tracker
+- [ ]  Work on speech recognition engine
+- [ ]  Work on personality matrix
+- [ ]  Work on diagnostic and status communication to S.P.A.R.K app
