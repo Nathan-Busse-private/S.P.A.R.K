@@ -29,6 +29,7 @@ Java
 - [ ]  Create a Build history directory for the app.
 - [ ]  Fix doesn't transmit stop commsnd automatically after connection in app bug.
 - [ ]  Fix Transmission not sent when button is held down in app bug.
+- [ ]  Implement S.P.A.R.K setup and configuration settings through the app.
 
 Python
 -----------
@@ -36,9 +37,13 @@ Python
 - [x]  Work on object detection.
 - [x]  Work on body tracker.
 - [x]  Work on hand tracker.
+- [ ]  Implement cloud update protacol.
+- [ ]  Implement SSH communication protacol.
+- [ ]  Implement recoverbelity in case of power loss.
 - [ ]  Work on object avoidance engine.
 - [ ]  Work on autonomous navigation engine.
 - [ ]  Work on speech recognition engine.
 - [ ]  Work on personality matrix.
 - [ ]  Work on diagnostic and status communication to S.P.A.R.K app.
 - [ ]  Work on Arduino serial bus communication with Raspberry Pi.
+- [ ]  Work on manual overwrite control.
