@@ -16,8 +16,9 @@ Hardware
 C++
 ------------
 
-- [ ]  Make S.P.A.R.K walk.
-- [ ]  Control S.P.A.R.K through bluetooth.
+- [x]  Make S.P.A.R.K walk.
+- [x]  Control S.P.A.R.K through bluetooth.
+- [ ]  Add killswitch function.
 - [ ]  Make S.P.A.R.K sit.
 - [ ]  Replace delay function with millis.
 - [ ]  Perfect walking gaits.
