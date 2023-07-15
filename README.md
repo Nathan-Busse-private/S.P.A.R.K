@@ -43,6 +43,8 @@ Python
 - [x]  Work on object detection.
 - [x]  Work on body tracker.
 - [x]  Work on hand tracker.
+- [ ]  Work on DNN.
+- [ ]  Work on Body behavior animations.
 - [ ]  Implement cloud update protacol.
 - [ ]  Implement auto cloud backup protacol.
 - [ ]  Implement SSH communication protacol.
@@ -52,3 +54,4 @@ Python
 - [ ]  Work on speech recognition engine.
 - [ ]  Work on personality matrix.
 - [ ]  Work on diagnostic and status communication to S.P.A.R.K app.
+
