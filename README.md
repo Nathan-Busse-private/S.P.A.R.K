@@ -4,6 +4,15 @@ A robot dog with a heart.
 
 # TO DO:
 
+Hardware
+------------
+
+- [x]  Redesign tibia joint
+- [x]  Redesign gyro mount
+- [ ]  Add a 5.1 volt 3 amp regulator
+- [ ]  Replace UNO with Raspberry Pi 4B 
+- [ ]  Replace gel battery with lithium ion.
+  
 C++
 ------------
 
@@ -24,9 +33,11 @@ Java
 Python
 -----------
 
-- [ ]  Work on object detection.
-- [ ]  Work on body tracker.
-- [ ]  Work on hand tracker.
+- [x]  Work on object detection.
+- [x]  Work on body tracker.
+- [x]  Work on hand tracker.
+- [ ]  Work on object avoidance engine.
+- [ ]  Work on autonomous navigation engine.
 - [ ]  Work on speech recognition engine.
 - [ ]  Work on personality matrix.
 - [ ]  Work on diagnostic and status communication to S.P.A.R.K app.
