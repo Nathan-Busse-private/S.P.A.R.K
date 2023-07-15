@@ -10,6 +10,6 @@ A robot dog with a heart.
 - [ ]  Fix doesn't transmit stop commsnd automatically after connection in app bug.
 - [ ]  Fix Transmission not sent when button is held down in app bug.
 - [ ]  Replace delay function with millis.
-- [ ]  Improve walking gaits.
+- [ ]  Perfect walking gaits.
 - [ ]  Create PID algorithm to adjust IK to help S.P.A.R.K naviagate uneven terrain better.
 - [ ]  Implement PID algorithm.
