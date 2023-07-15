@@ -7,10 +7,10 @@ A robot dog with a heart.
 Hardware
 ------------
 
-- [x]  Redesign tibia joint
-- [x]  Redesign gyro mount
-- [ ]  Add a 5.1 volt 3 amp regulator
-- [ ]  Replace UNO with Raspberry Pi 4B 
+- [x]  Redesign tibia joint.
+- [x]  Redesign gyro mount.
+- [ ]  Add a 5.1 volt 3 amp regulator.
+- [ ]  Replace UNO with Raspberry Pi 4B.
 - [ ]  Replace gel battery with lithium ion.
 - [ ]  Add web-cams.
   
