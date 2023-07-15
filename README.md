@@ -12,6 +12,7 @@ Hardware
 - [ ]  Add a 5.1 volt 3 amp regulator
 - [ ]  Replace UNO with Raspberry Pi 4B 
 - [ ]  Replace gel battery with lithium ion.
+- [ ]  Add web-cams.
   
 C++
 ------------
@@ -50,5 +51,4 @@ Python
 - [ ]  Work on speech recognition engine.
 - [ ]  Work on personality matrix.
 - [ ]  Work on diagnostic and status communication to S.P.A.R.K app.
-- [ ]  Work on Arduino serial bus communication with Raspberry Pi.
 - [ ]  Work on manual overwrite control.
