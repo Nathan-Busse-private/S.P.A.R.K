@@ -16,6 +16,9 @@ Hardware
 C++
 ------------
 
+- [ ]  Make S.P.A.R.K walk.
+- [ ]  Control S.P.A.R.K through bluetooth.
+- [ ]  Make S.P.A.R.K sit.
 - [ ]  Replace delay function with millis.
 - [ ]  Perfect walking gaits.
 - [ ]  Create PID algorithm to adjust IK to help S.P.A.R.K naviagate uneven terrain better.
@@ -38,7 +41,7 @@ Python
 - [x]  Work on body tracker.
 - [x]  Work on hand tracker.
 - [ ]  Implement cloud update protacol.
-- [ ]  Implement cloud backup protacol.
+- [ ]  Implement auto cloud backup protacol.
 - [ ]  Implement SSH communication protacol.
 - [ ]  Recover from power loss.
 - [ ]  Work on object avoidance engine.
