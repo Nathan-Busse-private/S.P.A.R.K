@@ -13,6 +13,7 @@ Hardware
 - [ ]  Replace UNO with Raspberry Pi 4B.
 - [ ]  Replace gel battery with lithium ion.
 - [ ]  Add web-cams.
+- [ ]  Add GPS.
   
 C++
 ------------
@@ -55,4 +56,5 @@ Python
 - [ ]  Work on speech recognition engine.
 - [ ]  Work on personality matrix.
 - [ ]  Work on diagnostic and status communication to S.P.A.R.K app.
+- [ ]  Work on GPS communication protacol.
 
