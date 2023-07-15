@@ -21,3 +21,9 @@ Java
 - [ ]  Fix doesn't transmit stop commsnd automatically after connection in app bug.
 - [ ]  Fix Transmission not sent when button is held down in app bug.
 
+Python
+-----------
+
+- [ ] Work on object detection
+- [ ] Work on body tracker
+- [ ] Work on hand tracker
