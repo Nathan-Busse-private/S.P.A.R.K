@@ -6,7 +6,7 @@ A robot dog with a heart.
 
 C++
 ------------
-- [x]  Redesign S.P.A.R.K logo.
+
 - [ ]  Replace delay function with millis.
 - [ ]  Perfect walking gaits.
 - [ ]  Create PID algorithm to adjust IK to help S.P.A.R.K naviagate uneven terrain better.
@@ -14,6 +14,8 @@ C++
 
 Java
 ------------
+
+- [x]  Redesign S.P.A.R.K logo.
 - [ ]  Build a disributable apk file for the app.
 - [ ]  Create a Build history directory for the app.
 - [ ]  Fix doesn't transmit stop commsnd automatically after connection in app bug.
