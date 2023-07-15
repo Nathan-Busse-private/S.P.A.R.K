@@ -27,7 +27,7 @@ Java
 - [x]  Redesign S.P.A.R.K logo.
 - [ ]  Build a disributable apk file for the app.
 - [ ]  Create a Build history directory for the app.
-- [ ]  Fix doesn't transmit stop commsnd automatically after connection in app bug.
+- [ ]  Fix doesn't transmit stop command automatically after connection in app bug.
 - [ ]  Fix Transmission not sent when button is held down in app bug.
 - [ ]  Implement S.P.A.R.K setup and configuration settings through the app.
 
@@ -38,8 +38,9 @@ Python
 - [x]  Work on body tracker.
 - [x]  Work on hand tracker.
 - [ ]  Implement cloud update protacol.
+- [ ]  Implement cloud backup protacol.
 - [ ]  Implement SSH communication protacol.
-- [ ]  Implement recoverbelity in case of power loss.
+- [ ]  Recover from power loss.
 - [ ]  Work on object avoidance engine.
 - [ ]  Work on autonomous navigation engine.
 - [ ]  Work on speech recognition engine.
