@@ -30,3 +30,4 @@ Python
 - [ ]  Work on speech recognition engine.
 - [ ]  Work on personality matrix.
 - [ ]  Work on diagnostic and status communication to S.P.A.R.K app.
+- [ ]  Work on Arduino serial bus communication with Raspberry Pi.
