@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
         }
         mConnectedThread = new ConnectedThread(btSocket);
         mConnectedThread.start();
-        mConnectedThread.write("x");
+        mConnectedThread.write("S");
     }
 
 
@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                tv.setText("Speed " + (progress * 100) / 10 + "%");
+                tv.setText("Height " + (progress * 100) / 10 + "%");
                 switch (progress) {
                     case 0:
                         writeData("0");
