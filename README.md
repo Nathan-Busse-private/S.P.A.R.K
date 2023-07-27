@@ -69,6 +69,3 @@ Bash
 - [x] Work on Bluetooth installer script
 - [x] Work on Arduino setup script
 - [x] Work on Bluetooth initializer script 
-
-
-
