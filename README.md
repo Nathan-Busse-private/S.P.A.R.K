@@ -9,8 +9,9 @@ Hardware
 
 - [x]  Redesign tibia joint.
 - [x]  Redesign gyro mount.
+- [x]  Replace UNO with Raspberry Pi 3B.
+- [x]  Add Arduino NANO
 - [ ]  Add a 5.1 volt 3 amp regulator.
-- [x]  Replace UNO with Raspberry Pi 4B.
 - [ ]  Replace gel battery with lithium ion.
 - [ ]  Add web-cams.
 - [ ]  Add GPS.
@@ -21,6 +22,7 @@ C++
 - [x]  Make S.P.A.R.K walk.
 - [x]  Control S.P.A.R.K through bluetooth.
 - [x]  Add killswitch function.
+- [x]  Make Serial_slave script
 - [x]  Make S.P.A.R.K rest.
 - [ ]  Make S.P.A.R.K sit.
 - [ ]  Replace delay function with millis.
@@ -45,6 +47,8 @@ Python
 - [x]  Work on object detection.
 - [x]  Work on body tracker.
 - [x]  Work on hand tracker.
+- [x]  Work on Serial_master script
+- [x]  Work on Bluetooth_command script.
 - [ ]  Work on DNN.
 - [ ]  Work on Body behavior animations.
 - [ ]  Implement cloud update protacol.
@@ -56,5 +60,14 @@ Python
 - [ ]  Work on speech recognition engine.
 - [ ]  Work on personality matrix.
 - [ ]  Work on diagnostic and status communication to S.P.A.R.K app.
+
+Bash
+-----------
+
+- [x] Work on Blueman installer script
+- [x] Work on Bluetooth installer script
+- [x] Work on Arduino setup script
+- [x] Work on Bluetooth initializer script 
 - [ ]  Work on GPS communication protacol.
+
 
