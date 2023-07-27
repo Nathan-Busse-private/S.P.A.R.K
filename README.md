@@ -60,6 +60,7 @@ Python
 - [ ]  Work on speech recognition engine.
 - [ ]  Work on personality matrix.
 - [ ]  Work on diagnostic and status communication to S.P.A.R.K app.
+- [ ]  Work on GPS communication protacol.
 
 Bash
 -----------
@@ -68,6 +69,6 @@ Bash
 - [x] Work on Bluetooth installer script
 - [x] Work on Arduino setup script
 - [x] Work on Bluetooth initializer script 
-- [ ]  Work on GPS communication protacol.
+
 
 
