@@ -14,6 +14,7 @@ Hardware
 - [ ]  Add a 5.1 volt 3 amp regulator.
 - [ ]  Replace gel battery with lithium ion.
 - [ ]  Add web-cams.
+- [ ]  Add GPS.
   
 C++
 ------------
@@ -22,6 +23,7 @@ C++
 - [x]  Control S.P.A.R.K through bluetooth.
 - [x]  Add killswitch function.
 - [x]  Make Serial_slave script
+- [x]  Make S.P.A.R.K rest.
 - [ ]  Make S.P.A.R.K sit.
 - [ ]  Replace delay function with millis.
 - [ ]  Perfect walking gaits.
@@ -37,6 +39,7 @@ Java
 - [x]  Fix doesn't transmit stop command automatically after connection in app bug.
 - [ ]  Fix Transmission not sent when button is held down in app bug.
 - [ ]  Implement S.P.A.R.K setup and configuration settings through the app.
+- [ ]  Prevent device from sleeping while using the app.
 
 Python
 -----------
@@ -46,6 +49,8 @@ Python
 - [x]  Work on hand tracker.
 - [x]  Work on Serial_master script
 - [x]  Work on Bluetooth_command script.
+- [ ]  Work on DNN.
+- [ ]  Work on Body behavior animations.
 - [ ]  Implement cloud update protacol.
 - [ ]  Implement auto cloud backup protacol.
 - [ ]  Implement SSH communication protacol.
@@ -63,3 +68,6 @@ Bash
 - [x] Work on Bluetooth installer script
 - [x] Work on Arduino setup script
 - [x] Work on Bluetooth initializer script 
+- [ ]  Work on GPS communication protacol.
+
+
