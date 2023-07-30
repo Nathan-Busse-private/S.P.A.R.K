@@ -2,7 +2,7 @@ import time
 from adafruit_servokit import ServoKit # https://learn.adafruit.com/16-channel-pwm-servo-driver/python-circuitpython
 
 import bluetooth
-from Walk import *
+from walk import *
 
 
 # Setting number of channels for PCA9865

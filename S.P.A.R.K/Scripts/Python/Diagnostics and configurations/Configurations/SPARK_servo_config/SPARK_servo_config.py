@@ -19,6 +19,11 @@ from adafruit_servokit import ServoKit # https://learn.adafruit.com/16-channel-p
 # Setting number of channels for PCA9865
 kit = ServoKit(channels=16)
 
+pca.frequency = 50
+
+import adafruit_motor.servo
+servo = adafruit_motor.servo.Servo(16)
+
 # Defining channels as a variable
 Coxae_A = 0
 Femur_A = 1
