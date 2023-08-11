@@ -35,8 +35,8 @@
 /* Coxae positions
    ---------------
 */
-#define CL_idle 90
-#define CR_idle 90
+#define CL_idle 92
+#define CR_idle 92
 
 /* Resting leg position
    --------------------
