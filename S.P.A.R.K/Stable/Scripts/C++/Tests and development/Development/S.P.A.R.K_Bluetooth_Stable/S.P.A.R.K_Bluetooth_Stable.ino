@@ -1,7 +1,7 @@
-/* S.P.A.R.K_Bluetooth
+/* S.P.A.R.K_Bluetooth_Stable
    Project: S.P.A.R.K
    Start date: 5 June 2023
-   Last edited: 11 July 2023
+   Last edited: 16 September 2023
    Info:
 
    Experimenting how to make S.P.A.R.K walk by manual control via Bluetooth.
@@ -11,6 +11,7 @@
 
 //including the libraries
 #include <SoftwareSerial.h>  // TX RX software library for bluetooth
+
 #include <Adafruit_PWMServoDriver.h>
 #include <Wire.h>
 
@@ -34,20 +35,20 @@
 /* Coxae positions
    ---------------
 */
-#define CL_idle 90 // 86
-#define CR_idle 90 // 94
+#define CL_idle 90
+#define CR_idle 90
 
 /* Resting leg position
    --------------------
 */
 
 // Degres left femur
-#define coxae_l 90 // 86
+#define coxae_l 90
 #define femur_l 180
 #define tibia_l 0
 
 // Degrees right femur
-#define coxae_r 90 // 94
+#define coxae_r 90
 #define femur_r 0
 #define tibia_r 180
 
@@ -333,7 +334,6 @@ void forward() {
   pwm.setPWM(Femur_C, 0, pulseWidth(FFR_back));
   //walk();
 
-/*
   // Walking forward
   pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));
   pwm.setPWM(Coxae_B, 0, pulseWidth(CL_idle));
@@ -369,7 +369,6 @@ void forward() {
   pwm.setPWM(Femur_A, 0, pulseWidth(FFL_back));
   pwm.setPWM(Femur_C, 0, pulseWidth(FFR_back));
   //walk();
-*/
 }
 
 void back() {
@@ -412,8 +411,7 @@ void back() {
   pwm.setPWM(Coxae_B, 0, pulseWidth(CL_idle));
   pwm.setPWM(Coxae_C, 0, pulseWidth(CR_idle));
   pwm.setPWM(Coxae_D, 0, pulseWidth(CR_idle));
-}
-/*
+
   // Cycle 2
   // Back legs
   // Rise
@@ -444,7 +442,6 @@ void back() {
   pwm.setPWM(Femur_C, 0, pulseWidth(BFR_forward));
   // walk();
 }
-*/
 
 void left() {
   pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));
@@ -476,10 +473,8 @@ void left() {
   pwm.setPWM(Femur_B, 0, pulseWidth(LFL_back));
   pwm.setPWM(Tibia_D, 0, pulseWidth(LTR_lower));
   pwm.setPWM(Tibia_B, 0, pulseWidth(LTL_lower));
-}
   //turn();
 
-/*
   // Cycle 2
   pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));
   pwm.setPWM(Coxae_B, 0, pulseWidth(CL_idle));
@@ -511,7 +506,7 @@ void left() {
   pwm.setPWM(Tibia_B, 0, pulseWidth(LTL_lower));
   //turn();
 }
-*/
+
 void right() {
 
   pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));
@@ -543,10 +538,8 @@ void right() {
   pwm.setPWM(Femur_B, 0, pulseWidth(RFL_back));
   pwm.setPWM(Tibia_D, 0, pulseWidth(RTR_lower));
   pwm.setPWM(Tibia_B, 0, pulseWidth(RTL_lower));
-}
   //turn();
 
-/*
   // Cycle 2
   pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));
   pwm.setPWM(Coxae_B, 0, pulseWidth(CL_idle));
@@ -578,7 +571,6 @@ void right() {
   pwm.setPWM(Tibia_B, 0, pulseWidth(RTL_lower));
   //turn();
 }
-*/
 
 void sleep() {
   // Left leg
@@ -657,18 +649,16 @@ void walking() {
   }
 
   */
-
-/* Wail till all servos to finish movinng.
-   --------------------------------------
-*/
-
-
-
-/* Wail till all servos to finish movinng.
-   --------------------------------------
-*/
 }
+/* Wail till all servos to finish movinng.
+   --------------------------------------
+*/
 
+
+
+/* Wail till all servos to finish movinng.
+   --------------------------------------
+*/
 void walk(void) {
   walking();
 }
