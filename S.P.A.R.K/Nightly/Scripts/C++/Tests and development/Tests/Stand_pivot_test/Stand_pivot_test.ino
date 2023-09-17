@@ -36,64 +36,60 @@ Made by Nathan-Busse
 
 // Standing position
 
-#define FCL0 130  // Coxae idle
-#define FCR0 130  // Coxae idle
-#define BCL0 40   // Coxae idle
-#define BCR0 40   // Coxae idle
+#define FCL0 70  // Coxae idle
+#define FCR0 70  // Coxae idle
+#define BCL0 110   // Coxae idle
+#define BCR0 110   // Coxae idle
 
-#define FCL10 140  // Coxae idle
-#define FCR10 140  // Coxae idle
-#define BCL10 50   // Coxae idle
-#define BCR10 50   // Coxae idle
+#define FCL10 74  // Coxae idle
+#define FCR10 74  // Coxae idle
+#define BCL10 106   // Coxae idle
+#define BCR10 106   // Coxae idle
 
-#define FCL20 150  // Coxae idle
-#define FCR20 150  // Coxae idle
-#define BCL20 60   // Coxae idle
-#define BCR20 60   // Coxae idle
+#define FCL20 78  // Coxae idle
+#define FCR20 78  // Coxae idle
+#define BCL20 102   // Coxae idle
+#define BCR20 102   // Coxae idle
 
-#define FCL30 160  // Coxae idle
-#define FCR30 160  // Coxae idle
-#define BCL30 70   // Coxae idle
-#define BCR30 70   // Coxae idle
+#define FCL30 82  // Coxae idle
+#define FCR30 82  // Coxae idle
+#define BCL30 98   // Coxae idle
+#define BCR30 98   // Coxae idle
 
-#define FCL40 170  // Coxae idle
-#define FCR40 170  // Coxae idle
-#define BCL40 80   // Coxae idle
-#define BCR40 80   // Coxae idle
+#define FCL40 86  // Coxae idle
+#define FCR40 86  // Coxae idle
+#define BCL40 94   // Coxae idle
+#define BCR40 94   // Coxae idle
 
-#define FCL50 180  // Coxae idle
-#define FCR50 180  // Coxae idle
+#define FCL50 90  // Coxae idle
+#define FCR50 90  // Coxae idle
 #define BCL50 90   // Coxae idle
 #define BCR50 90   // Coxae idle
 
-#define BCL60 40   // Coxae idle
-#define BCR60 40   // Coxae idle
-#define FCL60 130  // Coxae idle
-#define FCR60 130  // Coxae idle
+#define BCL60 86   // Coxae idle
+#define BCR60 86   // Coxae idle
+#define FCL60 94  // Coxae idle
+#define FCR60 94  // Coxae idle
 
-#define BCL70 50   // Coxae idle
-#define BCR70 50   // Coxae idle
-#define FCL70 140  // Coxae idle
-#define FCR70 140  // Coxae idle
+#define BCL70 82   // Coxae idle
+#define BCR70 82   // Coxae idle
+#define FCL70 98  // Coxae idle
+#define FCR70 98  // Coxae idle
 
-#define BCL80 60   // Coxae idle
-#define BCR80 60   // Coxae idle
-#define FCL80 150  // Coxae idle
-#define FCR80 150  // Coxae idle
+#define BCL80 78   // Coxae idle
+#define BCR80 78   // Coxae idle
+#define FCL80 102  // Coxae idle
+#define FCR80 102  // Coxae idle
 
-#define BCL90 70   // Coxae idle
-#define BCR90 70   // Coxae idle
-#define FCL90 160  // Coxae idle
-#define FCR90 160  // Coxae idle
+#define BCL90 74   // Coxae idle
+#define BCR90 74   // Coxae idle
+#define FCL90 106  // Coxae idle
+#define FCR90 106  // Coxae idle
 
-#define BCL100 80   // Coxae idle
-#define BCR100 80   // Coxae idle
-#define FCL100 170  // Coxae idle
-#define FCR100 170  // Coxae idle
-
-
-
-
+#define BCL100 70   // Coxae idle
+#define BCR100 70   // Coxae idle
+#define FCL100 110  // Coxae idle
+#define FCR100 110  // Coxae idle
 
 // Left legs
 #define FL_stand 135
@@ -134,172 +130,93 @@ void setup() {
 
 void loop() {
 
+
   // Stand position
   pwm.setPWM(Coxae_A, 0, pulseWidth(FCL0));
   pwm.setPWM(Coxae_B, 0, pulseWidth(BCL0));
   pwm.setPWM(Coxae_C, 0, pulseWidth(BCR0));
   pwm.setPWM(Coxae_D, 0, pulseWidth(FCR0));
 
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_stand));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_stand));
+delay(hold);
 
-  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_stand));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
-  delay(3000);
 
   pwm.setPWM(Coxae_A, 0, pulseWidth(FCL10));
   pwm.setPWM(Coxae_B, 0, pulseWidth(BCL10));
   pwm.setPWM(Coxae_C, 0, pulseWidth(BCR10));
   pwm.setPWM(Coxae_D, 0, pulseWidth(FCR10));
 
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_stand));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_stand));
+delay(hold);
 
-  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_stand));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
-  delay(3000);
 
   pwm.setPWM(Coxae_A, 0, pulseWidth(FCL20));
   pwm.setPWM(Coxae_B, 0, pulseWidth(BCL20));
   pwm.setPWM(Coxae_C, 0, pulseWidth(BCR20));
   pwm.setPWM(Coxae_D, 0, pulseWidth(FCR20));
 
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_stand));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_stand));
+delay(hold);
 
-  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_stand));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
-  delay(3000);
 
   pwm.setPWM(Coxae_A, 0, pulseWidth(FCL30));
   pwm.setPWM(Coxae_B, 0, pulseWidth(BCL30));
   pwm.setPWM(Coxae_C, 0, pulseWidth(BCR30));
   pwm.setPWM(Coxae_D, 0, pulseWidth(FCR30));
 
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_stand));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_stand));
+delay(hold);
 
-  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_stand));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
-  delay(3000);
 
   pwm.setPWM(Coxae_A, 0, pulseWidth(FCL40));
   pwm.setPWM(Coxae_B, 0, pulseWidth(BCL40));
   pwm.setPWM(Coxae_C, 0, pulseWidth(BCR40));
   pwm.setPWM(Coxae_D, 0, pulseWidth(FCR40));
 
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_stand));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_stand));
+delay(hold);
 
-  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_stand));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
-  delay(3000);
 
   pwm.setPWM(Coxae_A, 0, pulseWidth(FCL50));
   pwm.setPWM(Coxae_B, 0, pulseWidth(BCL50));
   pwm.setPWM(Coxae_C, 0, pulseWidth(BCR50));
   pwm.setPWM(Coxae_D, 0, pulseWidth(FCR50));
 
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_stand));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_stand));
+delay(hold);
 
-  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_stand));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
-  delay(3000);
 
   pwm.setPWM(Coxae_A, 0, pulseWidth(FCL60));
   pwm.setPWM(Coxae_B, 0, pulseWidth(BCL60));
   pwm.setPWM(Coxae_C, 0, pulseWidth(BCR60));
   pwm.setPWM(Coxae_D, 0, pulseWidth(FCR60));
 
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_stand));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_stand));
+delay(hold);
 
-  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_stand));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
-  delay(3000);
 
   pwm.setPWM(Coxae_A, 0, pulseWidth(FCL70));
   pwm.setPWM(Coxae_B, 0, pulseWidth(BCL70));
   pwm.setPWM(Coxae_C, 0, pulseWidth(BCR70));
   pwm.setPWM(Coxae_D, 0, pulseWidth(FCR70));
 
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_stand));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_stand));
+delay(hold);
 
-  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_stand));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
-  delay(3000);
 
   pwm.setPWM(Coxae_A, 0, pulseWidth(FCL80));
   pwm.setPWM(Coxae_B, 0, pulseWidth(BCL80));
   pwm.setPWM(Coxae_C, 0, pulseWidth(BCR80));
   pwm.setPWM(Coxae_D, 0, pulseWidth(FCR80));
 
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_stand));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_stand));
+delay(hold);
 
-  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_stand));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
-  delay(3000);
 
   pwm.setPWM(Coxae_A, 0, pulseWidth(FCL90));
   pwm.setPWM(Coxae_B, 0, pulseWidth(BCL90));
   pwm.setPWM(Coxae_C, 0, pulseWidth(BCR90));
   pwm.setPWM(Coxae_D, 0, pulseWidth(FCR90));
 
-  pwm.setPWM(Femur_A, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_B, 0, pulseWidth(FL_stand));
-  pwm.setPWM(Femur_C, 0, pulseWidth(FR_stand));
-  pwm.setPWM(Femur_D, 0, pulseWidth(FR_stand));
-
-  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_stand));
-  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_stand));
-  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
-  delay(3000);
+delay(hold);
 
   pwm.setPWM(Coxae_A, 0, pulseWidth(FCL100));
   pwm.setPWM(Coxae_B, 0, pulseWidth(BCL100));
   pwm.setPWM(Coxae_C, 0, pulseWidth(BCR100));
   pwm.setPWM(Coxae_D, 0, pulseWidth(FCR100));
 
+
   pwm.setPWM(Femur_A, 0, pulseWidth(FL_stand));
   pwm.setPWM(Femur_B, 0, pulseWidth(FL_stand));
   pwm.setPWM(Femur_C, 0, pulseWidth(FR_stand));
@@ -309,7 +226,83 @@ void loop() {
   pwm.setPWM(Tibia_B, 0, pulseWidth(TL_stand));
   pwm.setPWM(Tibia_C, 0, pulseWidth(TR_stand));
   pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
-  delay(3000);
+  
+delay(hold);
+
+  pwm.setPWM(Coxae_A, 0, pulseWidth(FCL100));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(BCL100));
+  pwm.setPWM(Coxae_C, 0, pulseWidth(BCR100));
+  pwm.setPWM(Coxae_D, 0, pulseWidth(FCR100));
+
+  delay(hold);
+
+  pwm.setPWM(Coxae_A, 0, pulseWidth(FCL90));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(BCL90));
+  pwm.setPWM(Coxae_C, 0, pulseWidth(BCR90));
+  pwm.setPWM(Coxae_D, 0, pulseWidth(FCR90));
+
+  delay(hold);
+
+  pwm.setPWM(Coxae_A, 0, pulseWidth(FCL80));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(BCL80));
+  pwm.setPWM(Coxae_C, 0, pulseWidth(BCR80));
+  pwm.setPWM(Coxae_D, 0, pulseWidth(FCR80));
+
+delay(hold);
+
+  pwm.setPWM(Coxae_A, 0, pulseWidth(FCL70));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(BCL70));
+  pwm.setPWM(Coxae_C, 0, pulseWidth(BCR70));
+  pwm.setPWM(Coxae_D, 0, pulseWidth(FCR70));
+
+  delay(hold);
+
+  pwm.setPWM(Coxae_A, 0, pulseWidth(FCL60));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(BCL60));
+  pwm.setPWM(Coxae_C, 0, pulseWidth(BCR60));
+  pwm.setPWM(Coxae_D, 0, pulseWidth(FCR60));
+
+  delay(hold);
+
+  pwm.setPWM(Coxae_A, 0, pulseWidth(FCL50));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(BCL50));
+  pwm.setPWM(Coxae_C, 0, pulseWidth(BCR50));
+  pwm.setPWM(Coxae_D, 0, pulseWidth(FCR50));
+
+  delay(hold);
+
+  pwm.setPWM(Coxae_A, 0, pulseWidth(FCL40));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(BCL40));
+  pwm.setPWM(Coxae_C, 0, pulseWidth(BCR40));
+  pwm.setPWM(Coxae_D, 0, pulseWidth(FCR40));
+
+  delay(hold);
+
+  pwm.setPWM(Coxae_A, 0, pulseWidth(FCL30));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(BCL30));
+  pwm.setPWM(Coxae_C, 0, pulseWidth(BCR30));
+  pwm.setPWM(Coxae_D, 0, pulseWidth(FCR30));
+
+  delay(hold);
+
+  pwm.setPWM(Coxae_A, 0, pulseWidth(FCL20));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(BCL20));
+  pwm.setPWM(Coxae_C, 0, pulseWidth(BCR20));
+  pwm.setPWM(Coxae_D, 0, pulseWidth(FCR20));
+
+  delay(hold);
+
+  pwm.setPWM(Coxae_A, 0, pulseWidth(FCL10));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(BCL10));
+  pwm.setPWM(Coxae_C, 0, pulseWidth(BCR10));
+  pwm.setPWM(Coxae_D, 0, pulseWidth(FCR10));
+
+  delay(hold);
+
+  pwm.setPWM(Coxae_A, 0, pulseWidth(FCL0));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(BCL0));
+  pwm.setPWM(Coxae_C, 0, pulseWidth(BCR0));
+  pwm.setPWM(Coxae_D, 0, pulseWidth(FCR0));
 
   delay(hold);
 }
