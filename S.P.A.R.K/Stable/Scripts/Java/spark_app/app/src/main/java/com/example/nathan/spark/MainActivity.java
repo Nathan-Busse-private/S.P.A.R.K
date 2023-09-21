@@ -167,43 +167,68 @@ public class MainActivity extends AppCompatActivity {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                tv.setText("Height " + (progress * 100) / 10 + "%");
+                //tv.setText("Pivot angle " + (2* progress )* 5.5 + "°");
                 switch (progress) {
                     case 0:
+                       // tv.setText("Pivot angle " + 7* progress  + "°");
+
                         writeData("0");
+                        tv.setText("Pivot angle " + 7 +progress  + "°      ( Left )");
+
                         break;
                     case 1:
                         writeData("1");
+                        tv.setText("Pivot angle " + 74* progress  + "°      ( Left )");
+
                         break;
                     case 2:
                         writeData("2");
+                        tv.setText("Pivot angle " + 39* progress  + "°      ( Left )");
+
                         break;
                     case 3:
                         writeData("3");
+                        tv.setText("Pivot angle " + 27.333333333333333* progress  + "°      ( Left )");
+
                         break;
                     case 4:
                         writeData("4");
+                        tv.setText("Pivot angle " + 21.5* progress  + "°      ( Left )");
+
                         break;
                     case 5:
                         writeData("5");
+                        tv.setText("Pivot angle " + 18* progress  + "°  ( Flat angle )");
+
                         break;
                     case 6:
                         writeData("6");
+                        tv.setText("Pivot angle " + 15.666666666666666* progress  + "°      ( Right )");
+
                         break;
                     case 7:
                         writeData("7");
+                        tv.setText("Pivot angle " + 14* progress  + "°      ( Right )");
+
                         break;
                     case 8:
                         writeData("8");
+                        tv.setText("Pivot angle " + 12.75* progress  + "°      ( Right )");
+
                         break;
                     case 9:
                         writeData("9");
+                        tv.setText("Pivot angle " + 11.7777777777777777* progress  + "°      ( Right )");
+
                         break;
                     case 10:
                         writeData("q");
+                        tv.setText("Pivot angle " + 11* progress  + "°      ( Right )");
+
                         break;
                     default:
                         writeData("~");
+                        tv.setText("Pivot angle " + 18* progress  + "°  ( Flat angle )");
                         break;
                 }
             }
