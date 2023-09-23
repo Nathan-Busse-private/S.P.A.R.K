@@ -35,8 +35,8 @@
 /* Coxae positions
    ---------------
 */
-#define CL_idle 92
-#define CR_idle 92
+#define CL_idle 90
+#define CR_idle 90
 
 /* Resting leg position
    --------------------
@@ -471,11 +471,7 @@ void forward() {
   //walk();
 
   // Walking forward
-  pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));
-  pwm.setPWM(Coxae_B, 0, pulseWidth(CL_idle));
-  pwm.setPWM(Coxae_C, 0, pulseWidth(CR_idle));
-  pwm.setPWM(Coxae_D, 0, pulseWidth(CR_idle));
-
+  
   // Cycle 2
   // Back legs
   // Rise
@@ -602,11 +598,6 @@ void back() {
   pwm.setPWM(Femur_A, 0, pulseWidth(BFL_forward));
   pwm.setPWM(Femur_C, 0, pulseWidth(BFR_forward));
   // walk();
-
-  pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));
-  pwm.setPWM(Coxae_B, 0, pulseWidth(CL_idle));
-  pwm.setPWM(Coxae_C, 0, pulseWidth(CR_idle));
-  pwm.setPWM(Coxae_D, 0, pulseWidth(CR_idle));
 
   // Cycle 2
   // Back legs
