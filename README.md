@@ -15,7 +15,7 @@ Hardware
 - [x]  Redesign gyro mount.
 - [x]  Replace UNO with Raspberry Pi 4B.
 - [x]  Add Arduino NANO
-- [v]  Add a 5.1 volt 3 amp regulator.
+- [x]  Add a 5.1 volt 3 amp regulator.
 - [ ]  Replace gel battery with lithium ion.
 - [ ]  Add web-cams.
 - [ ]  Add GPS.
