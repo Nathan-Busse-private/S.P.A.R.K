@@ -13,9 +13,9 @@ Hardware
 
 - [x]  Redesign tibia joint.
 - [x]  Redesign gyro mount.
-- [x]  Replace UNO with Raspberry Pi 3B.
+- [x]  Replace UNO with Raspberry Pi 4B.
 - [x]  Add Arduino NANO
-- [ ]  Add a 5.1 volt 3 amp regulator.
+- [v]  Add a 5.1 volt 3 amp regulator.
 - [ ]  Replace gel battery with lithium ion.
 - [ ]  Add web-cams.
 - [ ]  Add GPS.
@@ -28,6 +28,8 @@ C++
 - [x]  Add killswitch function.
 - [x]  Make Serial_slave script
 - [x]  Make S.P.A.R.K rest.
+- [x]  Make S.P.A.R.K pivot.
+- [ ]  Raze Femur A & C to allign with Femur B & D.
 - [ ]  Make S.P.A.R.K sit.
 - [ ]  Replace delay function with millis.
 - [ ]  Perfect walking gaits.
