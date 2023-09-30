@@ -29,7 +29,7 @@ C++
 - [x]  Make Serial_slave script
 - [x]  Make S.P.A.R.K rest.
 - [x]  Make S.P.A.R.K pivot.
-- [ ]  Raze Femur A & C to allign with Femur B & D.
+- [x]  Raze Femur A & C to allign with Femur B & D.
 - [ ]  Make S.P.A.R.K sit.
 - [ ]  Replace delay function with millis.
 - [ ]  Perfect walking gaits.
