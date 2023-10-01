@@ -84,7 +84,7 @@ C++
 
 Java
 -----------
-- [x]  App doesn't transmit stop command automatically after connection in the app 1234567.
+- [x]  App doesn't transmit stop command automatically after connection in the app 123456.
 - [ ]  Device falls asleep when no input is given in the app after the devices set sleep time is lapsed.
 - [ ]  Transmission is not sent when button is held down in app.
 
