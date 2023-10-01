@@ -76,15 +76,19 @@ Bash
 
 Hardware
 -----------
+
 - [x] Femur A & C is not alligned with Femur B & D.
 
 C++
 -----------
+
+- [ ] Rest mode takes 4 seconds to engage once S.P.A.R.K has been powered on.
 - [ ] Tibia B lifts first instead D causing S.P.A.R.K to lose balance at the first stride but recover there after.
 - [ ] Tibia do not lift off the ground propperly causing S.P.A.R.K to be unable to step over carpats. 
 
 Java
 -----------
+
 - [x]  App doesn't transmit stop command automatically after connection in the app.
 - [ ]  Device falls asleep when no input is given in the app after the devices set sleep time is lapsed.
 - [ ]  Transmission is not sent when button is held down in app.
