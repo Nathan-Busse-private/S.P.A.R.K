@@ -43,7 +43,6 @@ Java
 - [x]  Create a Build history directory for the app.
 - [ ]  Fix Transmission not sent when button is held down in app bug.
 - [ ]  Implement S.P.A.R.K setup and configuration settings through the app.
-- [ ]  Prevent device from sleeping while using the app.
 
 Python
 -----------
@@ -87,6 +86,8 @@ C++
 Java
 -----------
 - [x]  App doesn't transmit stop command automatically after connection in app bug.
+- [ ]  Device falls asleep when no input is given in the app after the devices set sleep time is lapsed.
+
 
 Python
 -----------
