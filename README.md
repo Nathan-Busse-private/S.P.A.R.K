@@ -29,7 +29,7 @@ C++
 - [x]  Make Serial_slave script
 - [x]  Make S.P.A.R.K rest.
 - [x]  Make S.P.A.R.K pivot.
-- [x]  Raze Femur A & C to allign with Femur B & D.
+
 - [ ]  Make S.P.A.R.K sit.
 - [ ]  Replace delay function with millis.
 - [ ]  Perfect walking gaits.
@@ -77,6 +77,10 @@ Bash
 - [x] Work on Bluetooth initializer script 
 
 # Known bugs:
+
+Hardware
+-----------
+
 
 C++
 -----------
