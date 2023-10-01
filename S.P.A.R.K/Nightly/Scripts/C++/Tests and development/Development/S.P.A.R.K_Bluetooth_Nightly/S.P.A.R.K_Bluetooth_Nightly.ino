@@ -1,7 +1,7 @@
 /* S.P.A.R.K_Bluetooth_Nightly
    Project: S.P.A.R.K
    Start date: 5 June 2023
-   Last edited: 30 September 2023
+   Last edited: 1 October 2023
    Info:
 
    Experimenting how to make S.P.A.R.K tibia_wait by manual control via Bluetooth.
@@ -190,7 +190,7 @@
 #define stand 4000
 #define rest 4000
 #define femur_hold 400
-#define tibia_hold 300
+#define tibia_hold 200
 #define rotate 200
 #define hold 400
 
