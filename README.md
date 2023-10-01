@@ -1,4 +1,4 @@
-![logo](https://github.com/Nathan-Busse-private/S.P.A.R.K/assets/82398683/5ae9812e-52db-4cab-8d8a-45c9495b9309)
+ ![logo](https://github.com/Nathan-Busse-private/S.P.A.R.K/assets/82398683/5ae9812e-52db-4cab-8d8a-45c9495b9309)
 
 A robot dog with a heart.
 
@@ -84,7 +84,7 @@ C++
 
 Java
 -----------
-- [x]  App doesn't transmit stop command automatically after connection in app bbbbbbb.
+- [x]  App doesn't transmit stop command automatically after connection in app bbbbbb.
 - [ ]  Device falls asleep when no input is given in the app after the devices set sleep time is lapsed.
 - [ ]  Transmission is not sent when button is held down in app.
 
