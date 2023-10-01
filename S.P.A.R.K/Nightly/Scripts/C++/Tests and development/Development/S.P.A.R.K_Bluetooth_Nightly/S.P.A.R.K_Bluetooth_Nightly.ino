@@ -55,41 +55,41 @@
 
 // Left legs
 #define FL_stand 135
-#define TL_stand 70  // 65
+#define TL_stand 65
 
 // Right legs
 #define FR_stand 45
-#define TR_stand 110  // 115
+#define TR_stand 115
 
 
 /* Walking FORWARD leg positions
    -----------------------------
 */
 // Left legs
-#define FTL_rise 50
+#define FTL_rise 40
 #define FFL_forward 130
-#define FTL_lower 70  // 65
+#define FTL_lower 65
 #define FFL_back 160
 
 // Right legs
-#define FTR_rise 130
+#define FTR_rise 140
 #define FFR_forward 50
-#define FTR_lower 110  // 115
+#define FTR_lower 115
 #define FFR_back 20
 
 /* Walking BACK leg positions
    --------------------------
 */
 // Left legs
-#define BTL_rise 50
-#define BFL_forward 130
-#define BTL_lower 70  // 65
+#define BTL_rise 40
+#define BFL_forward 140
+#define BTL_lower 65
 #define BFL_back 160
 
 // Right legs
-#define BTR_rise 130
+#define BTR_rise 140
 #define BFR_forward 50
-#define BTR_lower 110  // 115
+#define BTR_lower 115
 #define BFR_back 20
 
 /* Walking LEFT leg positions
@@ -97,13 +97,13 @@
 */
 
 // Left legs
-#define LTL_rise 50
+#define LTL_rise 40
 #define LFL_forward 160  // 155
-#define LTL_lower 70     // 65
+#define LTL_lower 65
 #define LFL_back 130
 
 // Right legs
-#define LTR_rise 130
+#define LTR_rise 140
 #define LFR_forward 45  // 45
 #define LTR_lower 115
 #define LFR_back 30
@@ -112,15 +112,15 @@
    -----------------------
 */
 // Left legs
-#define RTL_rise 50
+#define RTL_rise 40
 #define RFL_forward 134
-#define RTL_lower 70  // 65
+#define RTL_lower 65
 #define RFL_back 150
 
 // Right legs
-#define RTR_rise 130
+#define RTR_rise 140
 #define RFR_forward 25
-#define RTR_lower 110  // 115
+#define RTR_lower 115
 #define RFR_back 46
 
 /* Pivot left
