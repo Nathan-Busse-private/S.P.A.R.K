@@ -187,8 +187,8 @@
 /* Time delay
    ----------
 */
-#define stand 4000
-#define rest 4000
+#define stand 4
+#define rest 4
 #define femur_hold 400
 #define tibia_hold 200
 #define rotate 200
