@@ -79,7 +79,7 @@ Bash
 
 Hardware
 -----------
-
+- [x] Femur A & C is not alligned with Femur B & D.
 
 C++
 -----------
