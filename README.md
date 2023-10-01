@@ -77,3 +77,6 @@ Bash
 - [x] Work on Bluetooth initializer script 
 
 # Known bugs:
+
+Java
+-----------
