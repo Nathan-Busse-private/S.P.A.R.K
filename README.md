@@ -80,7 +80,8 @@ Hardware
 
 C++
 -----------
-
+- [ ] Tibia B lifts first instead D causing S.P.A.R.K to lose balance at the first stride but recover there after.
+- [ ] Tibia do not lift off the ground propperly causing S.P.A.R.K to be unable to step over carpats. 
 
 Java
 -----------
