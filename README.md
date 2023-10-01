@@ -41,7 +41,6 @@ Java
 - [x]  Redesign S.P.A.R.K logo.
 - [x]  Build a disributable apk file for the app.
 - [x]  Create a Build history directory for the app.
-
 - [ ]  Fix Transmission not sent when button is held down in app bug.
 - [ ]  Implement S.P.A.R.K setup and configuration settings through the app.
 - [ ]  Prevent device from sleeping while using the app.
