@@ -66,13 +66,13 @@
    -----------------------------
 */
 // Left legs
-#define FTL_rise 40
+#define FTL_rise 45
 #define FFL_forward 130
 #define FTL_lower 65
 #define FFL_back 160
 
 // Right legs
-#define FTR_rise 140
+#define FTR_rise 135
 #define FFR_forward 50
 #define FTR_lower 115
 #define FFR_back 20
@@ -81,13 +81,13 @@
    --------------------------
 */
 // Left legs
-#define BTL_rise 40
+#define BTL_rise 45
 #define BFL_forward 140
 #define BTL_lower 65
 #define BFL_back 160
 
 // Right legs
-#define BTR_rise 140
+#define BTR_rise 135
 #define BFR_forward 50
 #define BTR_lower 115
 #define BFR_back 20
@@ -97,13 +97,13 @@
 */
 
 // Left legs
-#define LTL_rise 40
+#define LTL_rise 45
 #define LFL_forward 160  // 155
 #define LTL_lower 65
 #define LFL_back 130
 
 // Right legs
-#define LTR_rise 140
+#define LTR_rise 135
 #define LFR_forward 45  // 45
 #define LTR_lower 115
 #define LFR_back 30
@@ -112,13 +112,13 @@
    -----------------------
 */
 // Left legs
-#define RTL_rise 40
+#define RTL_rise 45
 #define RFL_forward 134
 #define RTL_lower 65
 #define RFL_back 150
 
 // Right legs
-#define RTR_rise 140
+#define RTR_rise 135
 #define RFR_forward 25
 #define RTR_lower 115
 #define RFR_back 46
@@ -189,8 +189,8 @@
 */
 #define stand 4
 #define rest 4
-#define femur_hold 400
-#define tibia_hold 200
+#define femur_hold 300
+#define tibia_hold 250
 #define rotate 200
 #define hold 400
 
