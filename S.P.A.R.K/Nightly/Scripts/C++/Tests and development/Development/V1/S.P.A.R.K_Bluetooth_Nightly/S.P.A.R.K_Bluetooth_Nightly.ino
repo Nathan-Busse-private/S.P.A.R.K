@@ -62,35 +62,35 @@
 #define TR_stand 115
 
 
-/* Walking FORWARD leg positions
+/* Walking FORWARD leg positions Paramaters not yet tested
    -----------------------------
 */
 // Left legs
 #define FTL_rise 45
-#define FFL_forward 130
-#define FTL_lower 65
-#define FFL_back 160
+#define FFL_forward 160
+#define FTL_lower 55
+#define FFL_back 130
 
 // Right legs
 #define FTR_rise 135
-#define FFR_forward 50
-#define FTR_lower 115
-#define FFR_back 20
+#define FFR_forward 20
+#define FTR_lower 125
+#define FFR_back 50
 
 /* Walking BACK leg positions
    --------------------------
 */
 // Left legs
 #define BTL_rise 45
-#define BFL_forward 140
-#define BTL_lower 65
-#define BFL_back 160
+#define BFL_forward 135
+#define BTL_lower 55
+#define BFL_back 165
 
 // Right legs
 #define BTR_rise 135
-#define BFR_forward 50
-#define BTR_lower 115
-#define BFR_back 20
+#define BFR_forward 45
+#define BTR_lower 125
+#define BFR_back 15
 
 /* Walking LEFT leg positions
    --------------------------
@@ -189,8 +189,8 @@
 */
 #define stand 4
 #define rest 4
-#define femur_hold 300
-#define tibia_hold 250
+#define femur_hold 400
+#define tibia_hold 300
 #define rotate 200
 #define hold 400
 
