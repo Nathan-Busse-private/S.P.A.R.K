@@ -70,11 +70,11 @@
 
 // Left legs
 #define FL_stand 135
-#define TL_stand 65
+#define TL_stand 35
 
 // Right legs
 #define FR_stand 45
-#define TR_stand 115
+#define TR_stand 145
 
 
 
@@ -83,15 +83,15 @@
 */
 
 // Left legs
-#define TL_rise 35
+#define TL_rise 25
 #define FL_forward 130
-#define TL_lower 45
+#define TL_lower 35
 #define FL_back 150
 
 // Right legs
-#define TR_rise 145
+#define TR_rise 165
 #define FR_forward 50
-#define TR_lower 135
+#define TR_lower 145
 #define FR_back 30
 
 
@@ -217,7 +217,7 @@ void loop() {
   pwm.setPWM(Tibia_C, 0, pulseWidth(TR_lower));
   pwm.setPWM(Femur_A, 0, pulseWidth(FL_back));
   pwm.setPWM(Femur_C, 0, pulseWidth(FR_back));
-  delay(hold);
+  //delay(hold);
 }
 
 /* Pulsewidth declaration
