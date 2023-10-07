@@ -69,12 +69,13 @@
 */
 
 // Left legs
-#define FL_stand 45
-#define TL_stand 70
+#define FL_stand 135
+#define TL_stand 65
 
 // Right legs
-#define FR_stand 135
-#define TR_stand 110
+#define FR_stand 45
+#define TR_stand 115
+
 
 
 /* Walking leg positions
@@ -85,13 +86,14 @@
 #define TL_rise 35
 #define FL_forward 130
 #define TL_lower 45
-#define FL_back 160
+#define FL_back 150
 
 // Right legs
 #define TR_rise 145
 #define FR_forward 50
 #define TR_lower 135
-#define FR_back 20
+#define FR_back 30
+
 
 
 
@@ -100,7 +102,7 @@
    ----------
 */
 #define stand 4000
-#define hold 200
+#define hold 300
 #define rest 4000
 
 /* PWM setup
