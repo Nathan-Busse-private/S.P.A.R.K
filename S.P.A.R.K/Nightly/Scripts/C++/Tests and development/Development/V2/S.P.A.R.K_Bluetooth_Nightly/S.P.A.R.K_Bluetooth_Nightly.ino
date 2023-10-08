@@ -1,10 +1,10 @@
 /* S.P.A.R.K_Bluetooth_Nightly
    Project: S.P.A.R.K
    Start date: 5 June 2023
-   Last edited: 30 September 2023
+   Last edited: 8 October 2023
    Info:
 
-   Experimenting how to make S.P.A.R.K tibia_wait by manual control via Bluetooth.
+   Experimenting how to make S.P.A.R.K walk by manual control via Bluetooth.
 
    Made by Nathan-Busse
 */
