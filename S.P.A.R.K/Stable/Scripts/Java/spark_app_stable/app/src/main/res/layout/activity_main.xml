@@ -158,7 +158,7 @@
             android:layout_marginStart="-20dp"
             android:max="10"
             android:min="0"
-            android:progress="2"
+            android:progress="5"
             android:progressDrawable="@drawable/progress"
             android:thumb="@drawable/thumb" />
 
