@@ -83,7 +83,7 @@ C++
 -----------
 
 - [ ] Rest mode takes 4 seconds to engage once S.P.A.R.K has been powered on.
-- [ ] Tibia B lifts first instead D causing S.P.A.R.K to lose balance at the first stride but recover there after.
+- [x] Tibia B lifts first instead D causing S.P.A.R.K to lose balance at the first stride but recover there after.
 - [ ] Tibia do not lift off the ground propperly causing S.P.A.R.K to be unable to step over carpats. 
 
 Java
