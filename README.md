@@ -29,7 +29,7 @@ C++
 - [x]  Make Serial_slave script
 - [x]  Make S.P.A.R.K rest.
 - [x]  Make S.P.A.R.K pivot.
-- [ ]  Make S.P.A.R.K sit.
+- [x]  Make S.P.A.R.K sit.
 - [ ]  Replace delay function with millis.
 - [ ]  Perfect walking gaits.
 - [ ]  Create PID algorithm to adjust IK to help S.P.A.R.K naviagate uneven terrain better.
