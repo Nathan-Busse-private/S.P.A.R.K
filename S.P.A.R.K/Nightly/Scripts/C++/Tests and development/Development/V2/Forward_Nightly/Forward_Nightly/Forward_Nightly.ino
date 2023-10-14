@@ -1,7 +1,7 @@
 /* Backward_Forward
    Project: S.P.A.R.K
    Start date: 9 October 2023
-   Last edited: 9 October 2023
+   Last edited: 14 October 2023
    Info:
 
    Experimenting how to make S.P.A.R.K walk forward.
@@ -66,14 +66,14 @@
 */
 // Left legs
 #define BTL_rise 50
-#define BFL_forward 130
-#define BTL_lower 70  // 65
+#define BFL_forward 120
+#define BTL_lower 60  // 65
 #define BFL_back 160
 
 // Right legs
 #define BTR_rise 130
-#define BFR_forward 50
-#define BTR_lower 110  // 115
+#define BFR_forward 60
+#define BTR_lower 120  // 115
 #define BFR_back 20
 
 /* Time delay
