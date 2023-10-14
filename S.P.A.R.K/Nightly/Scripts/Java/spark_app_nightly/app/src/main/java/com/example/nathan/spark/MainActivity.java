@@ -306,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
                 if (brake.isChecked()) {
                     writeData("W");
                 } else {
-                    writeData("Z");
+                    writeData("ZS");
                 }
             }
         });
