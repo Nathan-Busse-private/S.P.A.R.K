@@ -401,13 +401,12 @@ void stop() {
 void forward() {
 
 
-  // Walking
   pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));
   pwm.setPWM(Coxae_B, 0, pulseWidth(CL_idle));
   pwm.setPWM(Coxae_C, 0, pulseWidth(CR_idle));
   pwm.setPWM(Coxae_D, 0, pulseWidth(CR_idle));
 
-  /// Cycle 1
+  // Cycle 1
   // Back legs
   // Rise
   pwm.setPWM(Tibia_D, 0, pulseWidth(BTR_rise));
