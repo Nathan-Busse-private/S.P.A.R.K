@@ -1,7 +1,7 @@
 /* S.P.A.R.K_Bluetooth_Nightly
    Project: S.P.A.R.K
    Start date: 5 June 2023
-   Last edited: 8 October 2023
+   Last edited: 14 October 2023
    Info:
 
    Experimenting how to make S.P.A.R.K walk by manual control via Bluetooth.
@@ -193,8 +193,8 @@
 /* Time delay
    ----------
 */
-#define stand 4000
-#define rest 4000
+#define stand 400
+#define rest 400
 #define femur_hold 400
 #define tibia_hold 300
 #define rotate 200
@@ -290,12 +290,15 @@ void loop() {
         sleep();
         break;
 
-       
+      case 'ZS':  // Sleep
+        rest_stand();
+        break;
+
         /*  Tricks
     ------
 */
       case 'W':  // Sit
-      sit();
+        sit();
 
         break;
 
@@ -1154,6 +1157,42 @@ void sit() {
   pwm.setPWM(Tibia_A, 0, pulseWidth(TL_stand));
   pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
   delay(rest);
+}
+
+void rest_stand() {
+
+/* Resting position
+   ----------------
+*/
+
+  // Left leg
+  pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));  // A
+  pwm.setPWM(Femur_A, 0, pulseWidth(femur_l));  // A
+  pwm.setPWM(Tibia_A, 0, pulseWidth(tibia_l));  // A
+
+  pwm.setPWM(Coxae_B, 0, pulseWidth(CL_idle));  // B
+  pwm.setPWM(Femur_B, 0, pulseWidth(femur_l));  // B
+  pwm.setPWM(Tibia_B, 0, pulseWidth(tibia_l));  // B
+
+  // Right leg
+  pwm.setPWM(Coxae_C, 0, pulseWidth(CR_idle));  // C
+  pwm.setPWM(Femur_C, 0, pulseWidth(femur_r));  // C
+  pwm.setPWM(Tibia_C, 0, pulseWidth(tibia_r));  // C
+
+  pwm.setPWM(Coxae_D, 0, pulseWidth(CR_idle));  // D
+  pwm.setPWM(Femur_D, 0, pulseWidth(femur_r));  // D
+  pwm.setPWM(Tibia_D, 0, pulseWidth(tibia_r));  // D
+  delay(rest);
+
+  pwm.setPWM(Femur_A, 0, pulseWidth(FL_stand));
+  pwm.setPWM(Femur_B, 0, pulseWidth(FL_stand));
+  pwm.setPWM(Femur_C, 0, pulseWidth(FR_stand));
+  pwm.setPWM(Femur_D, 0, pulseWidth(FR_stand));
+
+  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_stand));
+  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_stand));
+  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_stand));
+  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
 }
 
 // Milli function currently using (delay) between femur movement.
