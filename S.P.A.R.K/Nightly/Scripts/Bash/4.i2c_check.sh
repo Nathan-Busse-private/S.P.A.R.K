@@ -1,0 +1,1 @@
+ls /dev/i2c* /dev/spi*
