@@ -84,6 +84,7 @@ C++
 
 - [x] Rest mode takes 4 seconds to engage once S.P.A.R.K has been powered on.
 - [x] Tibia B lifts first instead D causing S.P.A.R.K to lose balance at the first stride but recover there after.
+- [ ] In Bluetooth Nightly V2 S.P.A.R.K walks on the spot when commmanding him to move forward.
 - [ ] Tibia do not lift off the ground propperly causing S.P.A.R.K to be unable to step over carpats. 
 
 Java
