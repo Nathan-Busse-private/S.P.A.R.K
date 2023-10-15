@@ -1,0 +1,88 @@
+Old overall weight:
+-------------------
+
+Total weight 886 grams excluding top plate and psu and battery holder.
+Total weight of servos = 660 grams
+886 + 660 = 1546 grams
+Weight of electronics with Arduino = 32.6 grams
+Weight of electronics with Raspberry Pi 4B = 53.6 grams
+Current weeith of robot with Arduino = 1578.6 grams = 1.5786 = 1.58 kilograms
+Current weight of robot with Raspberry Pi 4B = 1599.6 grams = 1.5996 = 1.60 kilograms
+
+IMPORTANT:
+---------
+
+I made a calculation error for the overall robot weight: 
+See journal for more info.
+
+Did some modifications to the following parts to correlate with the correct calculations:
+
+Old part weights:
+
+Femur = 197 grans
+Tibia = 105 grams
+Paw   = 117 grams
+Total = 419 grams
+
+New part weights:
+
+Femur = 67  grams
+Tibia = 66  grams
+Paw   = 16  grams
+Total = 149 grams
+
+# Correcting the old weight to match the new part's overall weight.
+
+Old weight (Arduino) 	     = 1578.6 grams
+Old weight (Raspberry Pi 4B) = 1599.6 grams
+Total old parts weight	     = 419.00 grams
+
+# Removing old part values from overall weight (Arduino):
+
+Overall weight(Arduino) - Total
+
+1578.6 - 419 = 1159.6 grams
+
+Total without Old parts = 1159.6
+
+Adding New part values to Total without Old parts(Arduino):
+
+Total without Old parts + 149
+
+1159.6 + 149 = 1308.6 grams
+
+New Overall weight in grams with Arduino = 1308.6 grams
+
+					 = 1.31 kilograms
+
+
+# Removing old part values from overall weight (Raspberry Pi 4B):
+
+Overall weight(Arduino) - Total
+
+1599.6 - 419 = 1180.6 grams
+
+Total without Old parts = 1180.6
+
+Adding New part values to Total without Old parts(Raspberry Pi 4B):
+
+Total without Old parts + 149
+
+1180.6 + 149 = 1329.6 grams
+
+New Overall weight in grams with Raspberry Pi 4B = 1329.6 grams
+
+					         = 1.33 kilograms
+
+# New overall weight:
+---------------------
+
+Arduino         = 1.31 Kg
+
+Raspberry Pi 4B = 1.33 Kg
+
+
+
+
+
+
