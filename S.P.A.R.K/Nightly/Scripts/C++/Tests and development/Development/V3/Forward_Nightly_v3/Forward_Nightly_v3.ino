@@ -65,15 +65,15 @@
    --------------------------
 */
 // Left legs
-#define BTL_rise 50
-#define BFL_forward 120
-#define BTL_lower 60  // 65
+#define BTL_rise 45
+#define BFL_forward 125
+#define BTL_lower 55  // 65
 #define BFL_back 160
 
 // Right legs
-#define BTR_rise 130
-#define BFR_forward 60
-#define BTR_lower 120  // 115
+#define BTR_rise 135
+#define BFR_forward 55
+#define BTR_lower 125  // 115
 #define BFR_back 20
 
 /* Time delay
@@ -82,7 +82,7 @@
 #define stand 4000
 #define rest 4000
 #define femur_hold 400
-#define tibia_hold 300
+#define tibia_hold 400
 #define rotate 200
 #define hold 400
 
