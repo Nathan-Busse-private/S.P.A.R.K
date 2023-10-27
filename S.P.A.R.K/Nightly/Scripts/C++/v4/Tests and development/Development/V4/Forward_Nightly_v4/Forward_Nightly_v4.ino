@@ -43,11 +43,11 @@
 
 // Degres left femur
 #define femur_l 180
-#define tibia_l 0
+#define tibia_l 180
 
 // Degrees right femur
 #define femur_r 0
-#define tibia_r 180
+#define tibia_r 0
 
 /* Standing leg positions
    ----------------------
