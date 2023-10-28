@@ -27,10 +27,10 @@
 
 // Rest positions
 #define FL_rest 180
-#define TL_rest 180
+#define TL_rest 0
 
 #define FR_rest 0
-#define TR_rest 0
+#define TR_rest 180
 
 
 // Time delay

@@ -42,12 +42,12 @@
 */
 
 // Left legs
-#define FL_stand 120
-#define TL_stand 120  // 65
+#define FL_stand 135
+#define TL_stand 45  // 65
 
 // Right legs
-#define FR_stand 60
-#define TR_stand 60  // 115
+#define FR_stand 45
+#define TR_stand 135  // 115
 
 /* Time delay
    ----------
