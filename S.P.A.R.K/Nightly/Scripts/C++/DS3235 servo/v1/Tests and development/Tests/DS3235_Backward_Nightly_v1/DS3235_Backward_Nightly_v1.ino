@@ -46,23 +46,14 @@
 /* Coxae positions
    ---------------
 */
-#define CL_idle 90
-#define CR_idle 90
+#define C_idle 90
 
-/* Resting leg position
-   --------------------
-*/
+// Rest positions
+#define FL_rest 180
+#define TL_rest 0
 
-// Degres left femur
-#define coxae_l 90
-#define femur_l 180
-#define tibia_l 0
-
-// Degrees right femur
-#define coxae_r 90
-#define femur_r 0
-#define tibia_r 0
-
+#define FR_rest 0
+#define TR_rest 180
 
 /* Standing leg positions
    ----------------------
@@ -80,21 +71,17 @@
 /* Walking BACK leg positions
    ---------------------
 */
-
 // Left legs
-#define BTL_rise 60
-#define BFL_forward 130
-#define BTL_lower 70
+#define BTL_rise 40
+#define BFL_forward 135
+#define BTL_lower 45  // 65
 #define BFL_back 160
 
 // Right legs
-#define BTR_rise 60
-#define BFR_forward 50
-#define BTR_lower 70
+#define BTR_rise 140
+#define BFR_forward 45
+#define BTR_lower 135  // 115
 #define BFR_back 20
-
-
-
 
 /* Time delay
    ----------
@@ -121,51 +108,34 @@ void setup() {
 /* Resting position
    ----------------
 */
+  /* Resting position
+   ----------------
+*/
+  pwm.setPWM(Coxae_A, 0, pulseWidth(C_idle));   // A
+  pwm.setPWM(Femur_A, 0, pulseWidth(FL_rest));  // A
+  pwm.setPWM(Tibia_A, 0, pulseWidth(TL_rest));  // A
 
-// Left leg
-  pwm.setPWM(Coxae_A, 0, pulseWidth(coxae_l));  // A
-  pwm.setPWM(Femur_A, 0, pulseWidth(femur_l));  // A
-  pwm.setPWM(Tibia_A, 0, pulseWidth(tibia_l));  // A
+  pwm.setPWM(Coxae_B, 0, pulseWidth(C_idle));   // B
+  pwm.setPWM(Femur_B, 0, pulseWidth(FL_rest));  // B
+  pwm.setPWM(Tibia_B, 0, pulseWidth(TL_rest));  // B
 
-  pwm.setPWM(Coxae_B, 0, pulseWidth(coxae_l));   // B
-  pwm.setPWM(Femur_B, 0, pulseWidth(femur_l));  // B
-  pwm.setPWM(Tibia_B, 0, pulseWidth(tibia_l));  // B
+  pwm.setPWM(Coxae_C, 0, pulseWidth(C_idle));   // C
+  pwm.setPWM(Femur_C, 0, pulseWidth(FR_rest));  // C
+  pwm.setPWM(Tibia_C, 0, pulseWidth(TR_rest));  // C
 
-  // Right leg
-  pwm.setPWM(Coxae_C, 0, pulseWidth(coxae_r));   // C
-  pwm.setPWM(Femur_C, 0, pulseWidth(femur_r));  // C
-  pwm.setPWM(Tibia_C, 0, pulseWidth(tibia_r));  // C
-
-  pwm.setPWM(Coxae_D, 0, pulseWidth(coxae_r));   // D
-  pwm.setPWM(Femur_D, 0, pulseWidth(femur_r));  // D
-  pwm.setPWM(Tibia_D, 0, pulseWidth(tibia_r));  // D
-
-  // Left leg
-  pwm.setPWM(Coxae_A, 0, pulseWidth(coxae_l));  // A
-  pwm.setPWM(Femur_A, 0, pulseWidth(femur_l));  // A
-  pwm.setPWM(Tibia_A, 0, pulseWidth(tibia_l));  // A
-
-  pwm.setPWM(Coxae_B, 0, pulseWidth(coxae_l));   // B
-  pwm.setPWM(Femur_B, 0, pulseWidth(femur_l));  // B
-  pwm.setPWM(Tibia_B, 0, pulseWidth(tibia_l));  // B
-
-  // Right leg
-  pwm.setPWM(Coxae_C, 0, pulseWidth(coxae_r));   // C
-  pwm.setPWM(Femur_C, 0, pulseWidth(femur_r));  // C
-  pwm.setPWM(Tibia_C, 0, pulseWidth(tibia_r));  // C
-
-  pwm.setPWM(Coxae_D, 0, pulseWidth(coxae_r));   // D
-  pwm.setPWM(Femur_D, 0, pulseWidth(femur_r));  // D
-  pwm.setPWM(Tibia_D, 0, pulseWidth(tibia_r));  // D
+  pwm.setPWM(Coxae_D, 0, pulseWidth(C_idle));   // D
+  pwm.setPWM(Femur_D, 0, pulseWidth(FR_rest));  // D
+  pwm.setPWM(Tibia_D, 0, pulseWidth(TR_rest));  // D
   delay(rest);
+
 
   /* Standing position
    ----------------
   */
-  pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));
-  pwm.setPWM(Coxae_B, 0, pulseWidth(CL_idle));
-  pwm.setPWM(Coxae_C, 0, pulseWidth(CR_idle));
-  pwm.setPWM(Coxae_D, 0, pulseWidth(CR_idle));
+  pwm.setPWM(Coxae_A, 0, pulseWidth(C_idle));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(C_idle));
+  pwm.setPWM(Coxae_C, 0, pulseWidth(C_idle));
+  pwm.setPWM(Coxae_D, 0, pulseWidth(C_idle));
 
   pwm.setPWM(Femur_A, 0, pulseWidth(FL_stand));
   pwm.setPWM(Femur_B, 0, pulseWidth(FL_stand));
@@ -177,16 +147,17 @@ void setup() {
   pwm.setPWM(Tibia_C, 0, pulseWidth(TR_stand));
   pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
   delay(stand);
+
 }
 
 void loop() {
 
   // Walking
-  pwm.setPWM(Coxae_A, 0, pulseWidth(CL_idle));
-  pwm.setPWM(Coxae_B, 0, pulseWidth(CL_idle));
-  pwm.setPWM(Coxae_C, 0, pulseWidth(CR_idle));
-  pwm.setPWM(Coxae_D, 0, pulseWidth(CR_idle));
-
+ 
+  pwm.setPWM(Coxae_A, 0, pulseWidth(C_idle));
+  pwm.setPWM(Coxae_B, 0, pulseWidth(C_idle));
+  pwm.setPWM(Coxae_C, 0, pulseWidth(C_idle));
+  pwm.setPWM(Coxae_D, 0, pulseWidth(C_idle));
 
 // Back legs
   // Rise
