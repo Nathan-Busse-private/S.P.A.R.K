@@ -43,30 +43,36 @@
 #define FR_rest 0
 #define TR_rest 180
 
+
 /* Standing leg positions
    ----------------------
 */
 
 // Left legs
-#define FL_stand 135
+#define FL_stand 150
 #define TL_stand 45  // 65
 
 // Right legs
-#define FR_stand 45
+#define FR_stand 30
 #define TR_stand 135  // 115
 
-/* Walking BACK leg positions
+/* Time delay
+   ----------
+*/
+
+
+/* Walking FORWARD leg positions
    --------------------------
 */
 // Left legs
-#define BTL_rise 45
-#define BFL_forward 110
+#define BTL_rise 40
+#define BFL_forward 135
 #define BTL_lower 45  // 65
 #define BFL_back 160
 
 // Right legs
-#define BTR_rise 135
-#define BFR_forward 70
+#define BTR_rise 140
+#define BFR_forward 45
 #define BTR_lower 135  // 115
 #define BFR_back 20
 
