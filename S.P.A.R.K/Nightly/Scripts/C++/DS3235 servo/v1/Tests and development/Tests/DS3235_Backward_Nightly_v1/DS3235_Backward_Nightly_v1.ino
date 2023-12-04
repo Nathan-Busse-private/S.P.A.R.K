@@ -60,12 +60,12 @@
 */
 
 // Left legs
-#define FL_stand 135
-#define TL_stand 70
+#define FL_stand 150
+#define TL_stand 45
 
 // Right legs
-#define FR_stand 45
-#define TR_stand 70
+#define FR_stand 30
+#define TR_stand 135
 
 
 /* Walking BACK leg positions
