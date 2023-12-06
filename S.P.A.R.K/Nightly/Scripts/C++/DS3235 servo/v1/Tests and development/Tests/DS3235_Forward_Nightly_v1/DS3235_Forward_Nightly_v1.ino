@@ -81,7 +81,7 @@
 */
 #define stand 4000
 #define rest 4000
-#define femur_hold 400
+#define femur_hold 300
 #define tibia_hold 400
 #define rotate 200
 #define hold 400
