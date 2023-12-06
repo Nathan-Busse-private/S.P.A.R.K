@@ -92,13 +92,12 @@ Made by Nathan-Busse
 #define FCR100 110  // Coxae idle
 
 // Left legs
-#define FL_stand 135
-#define TL_stand 70
+#define FL_stand 150
+#define TL_stand 45  // 65
 
 // Right legs
-#define FR_stand 45
-#define TR_stand 110
-
+#define FR_stand 30
+#define TR_stand 135  // 115
 
 #define FF_stand_L 135  // Femur left while standing
 #define FF_stand_R 45   // Femur right while standing
