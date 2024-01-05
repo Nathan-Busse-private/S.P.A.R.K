@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        _spark_ {
+            keyAlias '_spark_'
+            keyPassword '_spark_'
+            storeFile file('_spark_')
+            storePassword '_spark_'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.nathan.spark"
@@ -19,7 +27,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
