@@ -283,8 +283,9 @@ def main():
 
 
     
-# Walking speed (changes the walking loop time)
-    walkLoopSpd = 400
+
+    #Walking speed (changes the walking loop time)
+    walkLoopSpd= 400   #400
 
     #Change general motor speed
     eachMotorSpeed=[12]*4
@@ -299,22 +300,13 @@ def main():
     #Init to walking fwd
     dr=0
     drp=0
-    
-   
-
-
-def selectGait():
-    keys = p.getKeyboardEvents()
-    if keys.get(49):  # Key '1' for the first gait
-        return [0, 1, 3, 2]
-    elif keys.get(50):  # Key '2' for the second gait
-        return [2, 0, 3, 1]
-    elif keys.get(51):  # Key '3' for the third gait
-        return [0, 2, 1, 3]
-    else:
-        return [0, 1, 3, 2]  # Default gait
-
-
+    #Leg sequence (for rotating the robot, I chose to chg legs in the order front-left, fr, br, bl)
+    lseq=[0,1,3,2]     ##walk gait
+    lseqp=[0,1,3,2]    ## walk gait
+    #lseq=[2,0,3,1]   ##trot gait
+    #lseqp=[2,0,3,1]  ## trot gait
+    #lseq=[0,2,1,3]      ##amble gait
+    #lseqp=[0,2,1,3]     #amble gait
 
     while (1):
         cubePos, _ = p.getBasePositionAndOrientation(dog)
