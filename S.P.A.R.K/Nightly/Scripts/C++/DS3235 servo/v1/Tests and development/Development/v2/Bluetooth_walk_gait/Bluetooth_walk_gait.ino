@@ -10,32 +10,54 @@
 
    Diagram of robot structure and placements of leg joints A - D
 
-              ___________________________
-              |
-              |
+Diagram represeenting the leg layout of S.P.A.R.K                         
+_________________________________________________         
+           
+KEY:
+----           
+           
+---------------------
+|                   |
+|                   |
+|                   |
+|                   |
+|                   |
+---------------------
+
+
+
+
+
+    
+
 */
 
 //including the libraries
 #include <SoftwareSerial.h>  // TX RX software library for bluetooth
-#include <spark_pwm.h> // My own custom library
+#include <spark_pwm.h>       // My own custom library
 #include <Wire.h>
 
 // Pin declarations
-#define Coxae_A 0
-#define Femur_A 1
-#define Tibia_A 2
 
-#define Coxae_B 4
-#define Femur_B 5
-#define Tibia_B 6
+// Left Side
+//-------------
+#define Coxae_A 0 //-[A
+#define Femur_A 1 //-[A======================Front side
+#define Tibia_A 2 //-[A
 
-#define Coxae_C 8
-#define Femur_C 9
-#define Tibia_C 10
+#define Coxae_B 4 //-[B
+#define Femur_B 5 //-[B======================Bank side
+#define Tibia_B 6 //-[B
 
-#define Coxae_D 12
-#define Femur_D 13
-#define Tibia_D 14
+// Right Side
+-------------
+#define Coxae_C 8  //-[C
+#define Femur_C 9  //-[C======================Bank side
+#define Tibia_C 10 //-[C
+
+#define Coxae_D 12 //-[D
+#define Femur_D 13 //-[D======================FRONT side
+#define Tibia_D 14 //-[D
 
 /* Coxae flat angle positions
    ---------------
@@ -243,6 +265,25 @@ void loop() {
 
     currentMillis = millis();
     switch (command) {
+
+        // Switch between different gaits
+      case 'walk':
+        walk_gait();
+        break;
+
+      case 'trot':
+        trot_gait();
+        break;
+
+      case 'canter':
+        canter_gait();
+        break;
+
+      case 'gallop':
+        gallop_gait();
+        break;
+
+
       case 'F':  // Moving Forward
         forward();
         break;
@@ -356,7 +397,51 @@ void loop() {
   }
 }
 
-void stand_mode() {
+
+/* Inverse Kinetics Section
+-----------------------------
+*/
+
+// Walk gait IK function:
+void walk_IK() {
+}
+
+
+// Walk gait IK function:
+void trot_IK() {
+}
+
+
+// Walk gait IK function:
+void canter_IK() {
+}
+
+// Walk gait IK function:
+void gallop_IK() {
+}
+
+/* Gait mode selection
+=======================
+*/
+
+// Walk
+void walk_gait() {  // Default gait upon power up.
+}
+
+// Trot
+void trot_gait() {
+}
+
+//Canter
+void canter_gait() {
+}
+
+// Gallop
+void gallop_gait() {
+}
+
+
+void stand() {
 
   /* Stand mode position
    ----------------
@@ -378,25 +463,18 @@ void stand_mode() {
 }
 
 void forward() {
-
 }
 
 void back() {
-
-  
 }
 
 void left() {
-
 }
 
 void right() {
-
- 
 }
 
 void sleep() {
-
 }
 
 void pivot_pos_0() {
@@ -617,16 +695,10 @@ void emergency_shutoff() {
 }
 
 void sit() {
-  
-
- 
 }
 
 void rest_stand() {
-
-
 }
-
 
 /* Pulsewidth declaration
    ----------------------
