@@ -10,26 +10,6 @@
 
    Diagram of robot structure and placements of leg joints A - D
 
-Diagram represeenting the leg layout of S.P.A.R.K                         
-_________________________________________________         
-           
-KEY:
-----           
-           
----------------------
-|                   |
-|                   |
-|                   |
-|                   |
-|                   |
----------------------
-
-
-
-
-
-    
-
 */
 
 //including the libraries
@@ -81,6 +61,10 @@ KEY:
    ----------------------
 */
 
+#define CL_idle 90
+#define CL_idle 90
+
+
 // Left legs
 #define FL_stand 150
 #define TL_stand 45  // 65
@@ -88,6 +72,7 @@ KEY:
 // Right legs
 #define FR_stand 30
 #define TR_stand 135  // 115
+
 
 
 /* Walking BACK leg positions
@@ -462,7 +447,8 @@ void stand() {
   pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
 }
 
-void forward() {
+void forward() {\
+pwm,setPWM
 }
 
 void back() {
