@@ -1,14 +1,17 @@
-/* S.P.A.R.K_Bluetooth_Nightly
+/* S.P.A.R.K_Bluetooth_Nightly_BETA
    Project: S.P.A.R.K
-   Start date: 5 June 2023
-   Last edited: 5 January 2024
+   Start date: 16 February 2024
+   Last edited: 16 Febraury 2024
    Info:
+
+
+S.P.A.R.K is now in BETA BABY!!!
+
 
    Experimenting how to make S.P.A.R.K walk by manual control via Bluetooth.
 
    Made by Nathan-Busse
 
-   Diagram of robot structure and placements of leg joints A - D
 
 */
 
@@ -206,6 +209,7 @@ int previousMillisServo = 0;
 int pos = 0;
 long servoInterval = 400;
 unsigned long currentMillis = 0;
+
 
 void setup() {
   pwm.begin();
