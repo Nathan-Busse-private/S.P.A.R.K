@@ -4,7 +4,9 @@
    Last edited: 16 Febraury 2024
    Info:
 
+
 S.P.A.R.K is now in BETA BABY!!!
+
 
    Experimenting how to make S.P.A.R.K walk by manual control via Bluetooth.
 
@@ -65,6 +67,7 @@ S.P.A.R.K is now in BETA BABY!!!
 #define CL_idle 90
 #define CL_idle 90
 
+
 // Left legs
 #define FL_stand 150
 #define TL_stand 45  // 65
@@ -72,6 +75,8 @@ S.P.A.R.K is now in BETA BABY!!!
 // Right legs
 #define FR_stand 30
 #define TR_stand 135  // 115
+
+
 
 /* Walking BACK leg positions
    --------------------------
