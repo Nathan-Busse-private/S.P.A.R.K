@@ -31,7 +31,7 @@ S.P.A.R.K is now in BETA BABY!!!
 #define Tibia_B 6 //-[B
 
 // Right Side
--------------
+//-------------
 #define Coxae_C 8  //-[C
 #define Femur_C 9  //-[C======================Bank side
 #define Tibia_C 10 //-[C
@@ -284,7 +284,7 @@ void loop() {
 
         break;
       case 'S':  // Stop
-        stand_mode();
+        stand();
         break;
 
       case 'Z':  // Sleep
@@ -446,8 +446,27 @@ void stand() {
   pwm.setPWM(Tibia_D, 0, pulseWidth(TR_stand));
 }
 
-void forward() {\
-pwm,setPWM
+void forward() {
+  // Move the left front and right hind legs forward
+  pwm.setPWM(Coxae_A, 0, pulseWidth(FCL50));
+  pwm.setPWM(Femur_A, 0, pulseWidth(LFL_forward));
+  pwm.setPWM(Tibia_A, 0, pulseWidth(LTL_lower));
+
+  pwm.setPWM(Coxae_D, 0, pulseWidth(FCL50));
+  pwm.setPWM(Femur_D, 0, pulseWidth(RTR_lower));
+  pwm.setPWM(Tibia_D, 0, pulseWidth(RFL_forward));
+
+  // Move the right front and left hind legs forward
+  pwm.setPWM(Coxae_C, 0, pulseWidth(FCL50));
+  pwm.setPWM(Femur_C, 0, pulseWidth(RFR_forward));
+  pwm.setPWM(Tibia_C, 0, pulseWidth(RTL_lower));
+
+  pwm.setPWM(Coxae_B, 0, pulseWidth(FCL50));
+  pwm.setPWM(Femur_B, 0, pulseWidth(LTR_lower));
+  pwm.setPWM(Tibia_B, 0, pulseWidth(LFR_forward));
+
+  // Delay for a short duration to allow the movement to complete
+  delay(500); // Adjust delay as needed
 }
 
 void back() {
