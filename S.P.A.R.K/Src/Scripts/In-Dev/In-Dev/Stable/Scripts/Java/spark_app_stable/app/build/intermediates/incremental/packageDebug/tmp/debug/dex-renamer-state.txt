@@ -1,4 +1,0 @@
-#Sat Oct 14 07:12:59 CAT 2023
-base.0=C\:\\Users\\natha\\Documents\\Main\\Programming\\Robotics\\My Robots\\S.P.A.R.K\\Nightly\\Scripts\\Java\\spark_app_nightly\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-path.0=classes.dex
-renamed.0=classes.dex
