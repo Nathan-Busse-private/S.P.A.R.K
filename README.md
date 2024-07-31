@@ -2,10 +2,6 @@
 
 A robot dog with a heart.
 
-# NOTE!
-
-As of 30 July 2023 I will be shelving the project for now because I am starting college on the 31st July 2023 but I will make changes when time becomes available.
-
 # TO DO:
 
 Hardware
